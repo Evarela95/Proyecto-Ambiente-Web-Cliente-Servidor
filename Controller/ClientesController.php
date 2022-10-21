@@ -1,4 +1,6 @@
 <?php
+
+/*
 session_start();
 include_once 'Model/ClientesModel.php';
 
@@ -20,4 +22,7 @@ if($datosUsuario -> num_rows > 0)
 }
 }
 
-?>
+ */
+
+
+?> 
