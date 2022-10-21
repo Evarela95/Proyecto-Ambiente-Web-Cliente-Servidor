@@ -4,19 +4,19 @@ include_once 'Model/ClientesModel.php';
 
 if(isset($_POST["btnIngresar"]))
 {
-    $usuario = $_POST["Usuario"];
-    $contrasena = $_POST["Contrasena"];
-    $datosUsuario = ValidarCredenciales($usuario, $contrasena);
+    $Usuario = $_POST["Usuario"];
+    $Contrasena = $_POST["Contrasena"];
+    $datosUsuario = ValidarCredenciales($Usuario, $Contrasena);
 
 if($datosUsuario -> num_rows > 0)
 {
     
-    $_SESSION["sesionNombre"] = "Eduardo";
+    $_SESSION["sesionNombre"] = "??????????";
     
-    header("Location: View\inicio.php");
+    header("Location: login.php");
 }else{
 
-    header("Location: View\index.php");
+    header("Location: index.php");
 }
 }
 
