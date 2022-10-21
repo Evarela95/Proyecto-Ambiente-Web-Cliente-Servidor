@@ -1,10 +1,12 @@
-<?php include_once 'generales.php'; ?>
+<?php include_once 'generales.php'; 
+      include_once 'Controller/ClientesController';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <?php headerSite(); ?>
+    <?php headerSite(); ?>
 </head>
 
 <body>
@@ -18,18 +20,25 @@
                     <div class="email_box">
                         <div class="input_main">
                             <div class="container">
-                                <form action="/action_page.php">
-                                    
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Email" name="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="email-bt" placeholder="Password" name="Password">
-                                    </div>
+                                <form action="">
 
+                                    <div class="form-group">
+                                        <input type="text" class="email-bt" placeholder="Usuario" name="Usuario"
+                                            id="Usuario" onblur="ValidarDatos(); ">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="email-bt" placeholder="Contrasena" id="Contrasena"
+                                            name="Contrasena">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Ingresar" id="btnIngresar" name="btnIngresar"
+                                            class="btn btn-danger" onclick="        ">
+
+                                    </div>
                                 </form>
                             </div>
-                            <div class="main_bt"><a href="#">LOGIN</a></div>
+
+
                         </div>
                     </div>
                 </div>
@@ -44,31 +53,13 @@
     <?php footerSection(); ?>
     <!-- footer section end -->
     <!-- copyright section start -->
-    <div class="copyright_section">
-        <div class="container">
-        <p class="copyright_text">Copyright 2022</p>
-        </div>
-    </div>
+    <?php copyRightSection() ?>
     <!-- copyright section end -->
     <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
-    <!-- sidebar -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
-    <!-- javascript -->
-    <script src="js/owl.carousel.js"></script>
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-    <script>
-    $(document).ready(function() {
-                $(".fancybox").fancybox({
-                    openEffect: "none",
-                    closeEffect: "none"
-                });
-    </script>
+    <?php jsSection() ?>
+
+
+    <script src=ProyectoJustGame/Proyecto-Ambiente-Web-Cliente-Servidor/js/login.js></script>
 </body>
 
 </php>
