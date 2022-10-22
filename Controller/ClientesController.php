@@ -1,8 +1,7 @@
 <?php
 
-/*
 session_start();
-include_once 'Model/ClientesModel.php';
+include_once __dir__ . '/../Model/ClientesModel.php';
 
 if(isset($_POST["btnIngresar"]))
 {
@@ -10,19 +9,15 @@ if(isset($_POST["btnIngresar"]))
     $Contrasena = $_POST["Contrasena"];
     $datosUsuario = ValidarCredenciales($Usuario, $Contrasena);
 
-if($datosUsuario -> num_rows > 0)
-{
-    
-    $_SESSION["sesionNombre"] = "??????????";
-    
-    header("Location: login.php");
-}else{
+    if($datosUsuario -> num_rows > 0)
+    {
+        $_SESSION["sesionNombre"] = "??????????";
+        
+        header("Location: login.php");
+    }else{
 
-    header("Location: index.php");
+        header("Location: index.php");
+    }
 }
-}
-
- */
-
 
 ?> 

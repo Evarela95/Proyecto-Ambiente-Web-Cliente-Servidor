@@ -1,5 +1,5 @@
 <?php
-include_once 'ConnBD.php';
+include_once __dir__ . '/ConnBD.php';
 
 function ValidarCredenciales($Usuario, $Contrasena)
 {
@@ -10,6 +10,5 @@ function ValidarCredenciales($Usuario, $Contrasena)
     CloseDB($enlace);
     return $datosUsuario;
 }
-
 
 ?>
