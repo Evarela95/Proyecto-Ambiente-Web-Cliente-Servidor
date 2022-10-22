@@ -1,5 +1,5 @@
 <?php include_once 'generales.php'; 
-      include_once 'Controller/ClientesController';
+      // include_once 'ProyectoJustGame/Proyecto-Ambiente-Web-Cliente-Servidor/Controller/ClientesController.php';
 ?>
 
 <!DOCTYPE html>
