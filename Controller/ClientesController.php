@@ -12,11 +12,11 @@ if(isset($_POST["btnIngresar"]))
     if($datosUsuario -> num_rows > 0)
     {
         $_SESSION["sesionNombre"] = "??????????";
-        
-        header("Location: login.php");
-    }else{
-
         header("Location: index.php");
+        
+    }else{
+        header("Location: login.php");
+        
     }
 }
 
