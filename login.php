@@ -32,7 +32,7 @@ include_once __DIR__ . '/Controller/ClientesController.php';
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" value="Ingresar" id="btnIngresar" name="btnIngresar"
-                                            class="btn btn-danger" onblur="ValidarDatos();">
+                                            class="btn btn-danger">
                                            
                                     </div>
                                 </form>

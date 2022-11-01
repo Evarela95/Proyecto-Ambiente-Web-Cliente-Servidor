@@ -4,14 +4,14 @@ $(document).ready(function() {
 });
 
 function ValidarDatos() {
-    let usuario = $("#Usuario").val().trim();
-    let contrasena = $("#Contrasena").val().trim();
+    let usuario = document.getElementById("Usuario").value;
+    let contrasena = document.getElementById("Contrasena").value;
 
-    if ((usuario = "" && usuario == null) && (contrasena = "" && contrasena == null)) {
-        HabilitarBoton(true);
+    if (usuario != "" && contrasena != "") {
+        HabilitarBoton(false);
 
     }else{
-        HabilitarBoton(false);
+        HabilitarBoton(true);
     }
 }
 
@@ -19,6 +19,7 @@ function HabilitarBoton(flag)
 {
     $("#btnIngresar").prop("disabled", flag);
 }
+
 
 
 /* Ejemplo del profe 
