@@ -120,7 +120,6 @@ function jsSection(){
     <!-- javascript -->
     <script src="js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-    <script src= ProyectoJustGame/Proyecto-Ambiente-Web-Cliente-Servidor/js/abrirCerrarmenu.js
-';
+    <script src= "ProyectoJustGame/Proyecto-Ambiente-Web-Cliente-Servidor/js/abrirCerrarmenu.js"></script>';
 }
 ?>

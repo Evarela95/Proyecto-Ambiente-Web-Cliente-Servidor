@@ -1,3 +1,26 @@
+
+$(document).ready(function() {
+    HabilitarBoton(true);
+});
+
+function ValidarDatos() {
+    let usuario = $("#Usuario").val().trim();
+    let contrasena = $("#Contrasena").val().trim();
+
+    if ((usuario = "" && usuario == null) && (contrasena = "" && contrasena == null)) {
+        HabilitarBoton(true);
+
+    }else{
+        HabilitarBoton(false);
+    }
+}
+
+function HabilitarBoton(flag)
+{
+    $("#btnIngresar").prop("disabled", flag);
+}
+
+
 /* Ejemplo del profe 
 
 $(document).ready(function() {
