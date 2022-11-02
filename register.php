@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="form-group">
                                         <input type="button" value="Registrarse" id="btnIngresar" name="btnIngresar"
-                                            class="btn btn-danger" onclick="">
+                                            class="btn btn-danger">
 
                                     </div>
                                 </form>
