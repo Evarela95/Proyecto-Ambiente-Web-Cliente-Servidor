@@ -20,29 +20,29 @@
                             <div class="container">
                                 <form action="/action_page.php">
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Nombre" name="Nombre">
+                                        <input type="text" class="email-bt" placeholder="Nombre" name="Nombre" id="Nombre" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Primero apellido"
-                                            name="PrimerApellido">
+                                            name="PrimerApellido" id="PrimerApellido" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Segundo apellido"
-                                            name="SegundoApellido">
+                                            name="SegundoApellido" id="SegundoApellido" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Correo" name="Correo">
+                                        <input type="text" class="email-bt" placeholder="Correo" name="Correo" id="Correo" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Nombre de usuario"
-                                            name="NombreUsuario">
+                                            name="NombreUsuario" id="NombreUsuario" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="email-bt" placeholder="Contraseña"
-                                            name="Contraseña">
+                                            name="Contrasena" id="Contrasena" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="button" value="Registrarse" id="btnIngresar" name="btnIngresar"
+                                        <input type="submit" value="Registrarse" name="btnRegistrarse" id="btnRegistrarse"
                                             class="btn btn-danger">
 
                                     </div>
