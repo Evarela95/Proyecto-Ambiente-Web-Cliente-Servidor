@@ -65,14 +65,15 @@ include_once 'Model/ClientesModel.php';
                 <div class="product_section_2">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="image_2"><img src="images/ps5.png"></div>
-                            <div class="price_text">Precio $ <span style="color: white;">200</span></div>
+                            <div class="image_2"><img src="images/ps5-tr.png"></div>
+                            <div class="price_text">Precio $ <span style="color: white;">599</span></div>
                             <h1 class="game_text" style="color: white;">Play Station 5</h1>
                         </div>
                         <div class="col-md-6">
-                            <div class="image_2"><img src="images/pcgam.jpg" style="width: 400px; height:335px">
+                            <div class="image_2"> <img src="images/pc32.png"  />
+
                             </div>
-                            <div class="price_text">Precio $ <span style="color: white;">300</span></div>
+                            <div class="price_text">Precio $ <span style="color: white;">799</span></div>
                             <h1 class="game_text" style="color: white;">PC gamer</h1>
                         </div>
                     </div>

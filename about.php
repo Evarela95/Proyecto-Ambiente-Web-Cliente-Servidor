@@ -24,6 +24,13 @@
                         componentes informáticos.
                         Somo proveedores e integradores de soluciones con alta tecnología en hardware y software
                         respaldados por las diferentes marcas fabricantes.</p>
+                        <p1 class="lorem_text">NUESTRAS TIENDAS</p1> 
+                        <div class="col-md-6">
+                            <div class=""><img src="images/fototienda2.jpg"></div>
+                          </div>
+
+
+
                 </div>
             </div>
         </div>

@@ -72,6 +72,7 @@ function footerSection(){
                   <h2 class="account_text">Dirección</h2>
                   <p class="ipsum_text_2">San José, Costa Rica</p>
                   <p class="ipsum_text_2">Código Postal: 20102</p>
+                  <p class="ipsum_text_2" >Mapa del sitio: </p>
                   <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62879.67874264519!2d-84.14845052640717!3d9.935628367376324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342c50d15c5%3A0xe6746a6a9f11b882!2zU2FuIEpvc8Op!5e0!3m2!1ses!2scr!4v1664489498913!5m2!1ses!2scr"
                       width="250" height="225" style="border:0;" allowfullscreen="" loading="lazy"
@@ -81,7 +82,19 @@ function footerSection(){
                   <h2 class="account_text">Contacto</h2>
                   <p class="ipsum_text_2">Tel: 2442 3232</p>
                   <p class="ipsum_text_2">Correo: info@justgame.com</p>
+              </div> 
+              <div class="col-sm-6 col-md-6 col-lg-3">
+              <h2 class="account_text">Mas informacion</h2>
+              <p class="ipsum_text_2" >Sobre nosotros</p>
+              <p class="ipsum_text_2" >Metodos de Pago</p>
+              <p class="ipsum_text_2" >Tiendas</p>
+              <p class="ipsum_text_2" >Términos & Condiciones</p>
+              <p class="ipsum_text_2" >Cuenta</p>
+              <p class="ipsum_text_2" >Contacto</p>
               </div>
+          </div>
+        
+                            
           </div>
       </div>
       <div class="social_icon">
@@ -101,7 +114,7 @@ function copyRightSection(){
     echo 
     '<div class="copyright_section">
     <div class="container">
-    <p class="copyright_text">Copyright 2022</p>
+    <p class="copyright_text">Copyright 2022 JUSTGAME, TODOS LOS DERECHOS RESERVADOS.</p>
     </div>';
 
 }
@@ -120,6 +133,7 @@ function jsSection(){
     <!-- javascript -->
     <script src="js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-    <script src= "ProyectoJustGame/Proyecto-Ambiente-Web-Cliente-Servidor/js/abrirCerrarmenu.js"></script>';
+    <script src= ProyectoJustGame/Proyecto-Ambiente-Web-Cliente-Servidor/js/abrirCerrarmenu.js
+';
 }
 ?>
