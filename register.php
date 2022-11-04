@@ -67,6 +67,8 @@
     <!-- copyright section end -->
     <!-- Javascript files-->
     <?php jsSection() ?>
+
+    <script src="../Proyecto-Ambiente-Web-Cliente-Servidor/js/register.js"></script>
 </body>
 
 </php>
