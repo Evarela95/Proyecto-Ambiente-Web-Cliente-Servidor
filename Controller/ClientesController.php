@@ -20,4 +20,32 @@ if(isset($_POST["btnIngresar"]))
     }
 }
 
+
+function CargarUsuarios()
+{
+    $datosUsuarios = ListarUsuarios();
+
+    if($datosUsuarios -> num_rows > 0)
+    {
+        while($resultado = mysqli_fetch_array($datosUsuarios))
+        {
+            echo "<tr>";
+            echo "<td>" . $resultado["nombre"] . "</td>";
+            echo "<td>" . $resultado["primApellido"] . "</td>";
+            echo "<td>" . $resultado["segApellido"] . "</td>";
+            echo "<td>" . $resultado["username"] . "</td>";
+            echo "<td>" . $resultado["correo"] . "</td>";
+            echo "<td>" . $resultado["descripcion"] . "</td>";
+            echo "<td>" . $resultado["contrasena"] . "</td>";
+            echo '<td>
+            <a class="btn btn-primary" href="##############' . $resultado["id_usuario"] . '">Editar<a/>
+            <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Eliminar</a>
+         </td>';
+    echo "</tr>";
+
+            
+        }
+    }
+}
+
 ?> 

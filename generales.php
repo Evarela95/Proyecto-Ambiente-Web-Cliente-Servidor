@@ -7,6 +7,7 @@ function headerSite()
     
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Responsive-->
@@ -19,6 +20,7 @@ function headerSite()
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">';
+      
 }
 
 function headerSection() 
@@ -53,10 +55,19 @@ function headerSection()
                     <li class="nav-item">
                         <a class="nav-link" href="register.php">REGISTRARSE</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACION</a>
+                    </li>
+                    
                 </ul>
             </div>
         </nav>
-    </div>';
+
+        <!-- Example single danger button -->
+
+    </div>
+    
+    ';
 }
  
 function footerSection(){
@@ -130,4 +141,6 @@ function jsSection(){
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 ';
 }
+
+
 ?>

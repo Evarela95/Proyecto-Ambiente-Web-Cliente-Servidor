@@ -11,4 +11,15 @@ function ValidarCredenciales($Usuario, $Contrasena)
     return $datosUsuario;
 }
 
+
+function ListarUsuarios()
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL ListarUsuarios();";
+    $datosUsuarios = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosUsuarios;
+}
+
 ?>

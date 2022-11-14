@@ -13,8 +13,13 @@ include_once 'Model/ClientesModel.php';
 </head>
 
 <body>
+<?php 
+        navBar();
+    ?>
     <?php headerSection(); ?>
-
+    <ol class="breadcrumb">
+                <li> <?php echo $_SESSION["sesionNombre"]; ?> <a href="inicio.php"></a></li>
+            </ol>
     <!-- banner section start -->
     <div class="banner_section layout_padding">
         <div class="container">
