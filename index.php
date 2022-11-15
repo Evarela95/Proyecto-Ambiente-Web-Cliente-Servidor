@@ -1,4 +1,6 @@
 <?php 
+if (session_status() == PHP_SESSION_NONE)
+session_start();
 
 include_once 'generales.php';
 include_once 'Controller/ClientesController.php';
@@ -12,14 +14,11 @@ include_once 'Model/ClientesModel.php';
     <?php headerSite(); ?>
 </head>
 
-<body>
-<?php 
-        navBar();
-    ?>
-    <?php headerSection(); ?>
-    <ol class="breadcrumb">
-                <li> <?php echo $_SESSION["sesionNombre"]; ?> <a href="inicio.php"></a></li>
+<ol class="breadcrumb">
+                <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
             </ol>
+    <?php headerSection(); ?>
+    
     <!-- banner section start -->
     <div class="banner_section layout_padding">
         <div class="container">

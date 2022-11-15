@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if (session_status() == PHP_SESSION_NONE)
+    session_start();
+
 include_once __dir__ . '/../Model/ClientesModel.php';
 
 if(isset($_POST["btnIngresar"]))
@@ -11,7 +13,9 @@ if(isset($_POST["btnIngresar"]))
 
     if($datosUsuario -> num_rows > 0)
     {
-        $_SESSION["sesionNombre"] = "??????????";
+        $resultado = mysqli_fetch_array($datosUsuario);
+        $_SESSION["sesionNombre"] = $resultado["nombre"];
+        $_SESSION["sesionTipoUsuario"] = $resultado["tipoUsuario"];
         header("Location: index.php");
         
     }else{
@@ -38,7 +42,7 @@ function CargarUsuarios()
             echo "<td>" . $resultado["descripcion"] . "</td>";
             echo "<td>" . $resultado["contrasena"] . "</td>";
             echo '<td>
-            <a class="btn btn-primary" href="##############' . $resultado["id_usuario"] . '">Editar<a/>
+            <a class="btn btn-primary" href="EditarPerfil.php">Editar<a/>
             <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Eliminar</a>
          </td>';
     echo "</tr>";
