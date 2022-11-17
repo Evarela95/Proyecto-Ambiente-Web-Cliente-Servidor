@@ -1,4 +1,5 @@
-<?php include_once 'generales.php'; ?>
+<?php include_once 'generales.php'; 
+include_once __DIR__ . '\Controller\ClientesController.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@
                     <div class="email_box">
                         <div class="input_main">
                             <div class="container">
-                                <form action="/action_page.php">
+                                <form action="" method="post">
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Nombre" name="Nombre" id="Nombre" onblur="RegistrarDatos();">
                                     </div>

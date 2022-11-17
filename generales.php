@@ -58,6 +58,9 @@ function headerSection()
                     <li class="nav-item">
                         <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACION</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="EditarPerfil.php">PERFIL</a>
+                    </li>
                     
                 </ul>
             </div>

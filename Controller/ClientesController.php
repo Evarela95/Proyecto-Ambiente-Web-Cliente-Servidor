@@ -52,6 +52,16 @@ function CargarUsuarios()
     }
 }
 
+if(isset($_POST["btnRegistrarse"]))
+{   $Nombre = $_POST["Nombre"];
+    $PrimApellido = $_POST["PrimerApellido"];
+    $SegApellido = $_POST["SegundoApellido"]; 
+    $Correo = $_POST["Correo"];
+    $Username = $_POST["NombreUsuario"];
+    $Contrasena = $_POST["Contrasena"];
+     RegistrarUsuario($Nombre, $PrimApellido, $SegApellido, $Correo, $Username, $Contrasena);
+}
+
 if(isset($_POST["btn"]))
 
 ?> 

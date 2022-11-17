@@ -28,4 +28,13 @@ function EliminarUsuarios(){
     $datosUsarios = $enlace -> query($procedimiento);
 }
 
+function RegistrarUsuario($Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasena)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL RegistrarUsuario('$Nombre','$PrimApellido','$SegApellido','$Correo','$Username','$Contrasena');";
+    $datosRegistrar = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
 ?>
