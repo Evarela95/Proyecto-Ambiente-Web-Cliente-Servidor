@@ -22,4 +22,10 @@ function ListarUsuarios()
     return $datosUsuarios;
 }
 
+function EliminarUsuarios(){
+    $enlace = OpenDB();
+    $procedimiento = "CALL EliminarUsuarios();";
+    $datosUsarios = $enlace -> query($procedimiento);
+}
+
 ?>

@@ -2,7 +2,7 @@
 
     function OpenDB()
     {
-        return mysqli_connect("localhost:3307", "root", "", "justgame");
+        return mysqli_connect("localhost:3308", "root", "", "justgame");
     }
 
     function CloseDB($enlace)

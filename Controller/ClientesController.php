@@ -43,7 +43,7 @@ function CargarUsuarios()
             echo "<td>" . $resultado["contrasena"] . "</td>";
             echo '<td>
             <a class="btn btn-primary" href="EditarPerfil.php">Editar<a/>
-            <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Eliminar</a>
+            <a class="btn btn-danger" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Eliminar</a>
          </td>';
     echo "</tr>";
 
@@ -51,5 +51,7 @@ function CargarUsuarios()
         }
     }
 }
+
+if(isset($_POST["btn"]))
 
 ?> 
