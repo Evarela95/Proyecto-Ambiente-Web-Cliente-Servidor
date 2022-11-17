@@ -43,7 +43,7 @@ function CargarUsuarios()
             echo "<td>" . $resultado["contrasena"] . "</td>";
             echo '<td>
             <a class="btn btn-primary" href="EditarPerfil.php">Editar<a/>
-            <a class="btn btn-danger" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Eliminar</a>
+            <a input type="submit" class="btn btn-danger" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false" name="btnEliminar" id="btnEliminar">Eliminar</a>
          </td>';
     echo "</tr>";
 
@@ -62,6 +62,17 @@ if(isset($_POST["btnRegistrarse"]))
      RegistrarUsuario($Nombre, $PrimApellido, $SegApellido, $Correo, $Username, $Contrasena);
 }
 
-if(isset($_POST["btn"]))
+if(isset($_POST["btnEliminar"])){
+    $datos = EliminarUsuarios();   
+
+    if($datos -> num_rows > 0)
+    {
+        while($fila = mysqli_fetch_array($datos))
+        {
+            if($Id == $fila["id_usuario"])
+            EliminarUsuarios($Id);
+        }
+    }
+}
 
 ?> 
