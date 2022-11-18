@@ -1,4 +1,36 @@
-<?php include_once 'generales.php'; ?>
+<?php 
+
+ 
+
+if (session_status() == PHP_SESSION_NONE)
+{
+    session_start();
+}
+   include_once __DIR__ . '\generales.php';
+   include_once __DIR__ . '\Controller\ClientesController.php';
+
+    
+
+
+
+?>
+
+
+
+<!-- $codigo = $_GET["q"];
+ $_SESSION["q"] = $codigo;
+
+ $datos = ConsultarDatosUser($_GET["q"]);
+
+
+
+ /action_page.php
+ -->
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,9 +40,27 @@
 </head>
 
 <body>
+<form action="" method="post">
     <!-- header section start -->
     <?php headerSection(); ?>
-    <!-- contact section start -->
+
+    <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+            <ol class="breadcrumb">
+                <li> <?php echo $_SESSION["sesionNombre"]; ?> <a href="ADMINISTRACION.php"> / Usuarios</a></li>
+            </ol>
+
+            <div class="templatemo-panels">
+        
+     
+
+  
+            <!-- contact section start 
+
+
+
+
+-->
     <div class="contact_section layout_padding padding_top_0">
         <div class="container">
             <div class="row">
@@ -18,17 +68,19 @@
                     <div class="email_box">
                         <div class="input_main">
                             <div class="container">
-                                <form action="/action_page.php">
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Nombre" name="Nombre" id="Nombre" onblur="">
+                                    
+                                        <input type="text" class="email-bt"  placeholder="Nombre" id="Nombre" name="Nombre" onblur=""
+                                       >
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Primero apellido"
-                                            name="PrimerApellido" id="PrimerApellido" onblur="">
+                                            name="PrimerApellido" id="PrimerApellido"  >
+                                                                                    
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Segundo apellido"
-                                            name="SegundoApellido" id="SegundoApellido" onblur="">
+                                            name="SegundoApellido" id="SegundoApellido" onblur="" >
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Correo" name="Correo" id="Correo" onblur="">
@@ -44,9 +96,9 @@
                                     <div class="form-group">
                                         <input type="submit" value="Actualizar" name="btnActualizar" id="btnActualizar"
                                             class="btn btn-danger">
-
+                                            <a href="MantUsuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                                     </div>
-                                </form>
+                                
                             </div>
 
                         </div>
@@ -68,7 +120,11 @@
     <!-- Javascript files-->
     <?php jsSection() ?>
 
-    <script src="../Proyecto-Ambiente-Web-Cliente-Servidor/js/register.js"></script>
+    
+    <script src="../Proyecto-Ambiente-Web-Cliente-Servidor-main/js/register.js"></script>
+
+
+    </form>
 </body>
 
 </php>

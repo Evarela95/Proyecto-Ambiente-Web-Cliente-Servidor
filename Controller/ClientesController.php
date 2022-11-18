@@ -1,9 +1,17 @@
 <?php
 
 if (session_status() == PHP_SESSION_NONE)
+{
     session_start();
+}
+include_once __DIR__ . '\..\Model\ClienteModel.php';
 
-include_once __dir__ . '/../Model/ClientesModel.php';
+function ConsultarDatosUser($id)
+{
+    $datos = ConsultarDatosUsuarioModel($id);
+    return mysqli_fecth_array($datos);
+}
+
 
 if(isset($_POST["btnIngresar"]))
 {
@@ -33,19 +41,20 @@ function CargarUsuarios()
     {
         while($resultado = mysqli_fetch_array($datosUsuarios))
         {
-            echo "<tr>";
-            echo "<td>" . $resultado["nombre"] . "</td>";
-            echo "<td>" . $resultado["primApellido"] . "</td>";
-            echo "<td>" . $resultado["segApellido"] . "</td>";
-            echo "<td>" . $resultado["username"] . "</td>";
-            echo "<td>" . $resultado["correo"] . "</td>";
-            echo "<td>" . $resultado["descripcion"] . "</td>";
-            echo "<td>" . $resultado["contrasena"] . "</td>";
-            echo '<td>
-            <a class="btn btn-primary" href="EditarPerfil.php">Editar<a/>
-            <a input type="submit" class="btn btn-danger" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false" name="btnEliminar" id="btnEliminar">Eliminar</a>
-         </td>';
-    echo "</tr>";
+            echo '<tr>';
+            echo '<td>' . $resultado["nombre"] . '</td>';
+            echo '<td>' . $resultado["primApellido"] . '</td>';
+            echo '<td>' . $resultado["segApellido"] . '</td>';
+            echo '<td>' . $resultado["username"] . '</td>';
+            echo '<td>' . $resultado["correo"] . '</td>';
+            echo '<td>' . $resultado["descripcion"] . '</td>';
+            echo '<td>' . $resultado["contrasena"] . '</td>';
+            echo '<td> 
+            <a class="btn btn-primary" href="EditarPerfil.php?q=' . $resultado["id_usuario"]. '">Editar<a/>
+            <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Eliminar</a> 
+            </td>';
+            
+            echo "</tr>";
 
             
         }
@@ -74,5 +83,25 @@ if(isset($_POST["btnEliminar"])){
         }
     }
 }
+
+
+
+if(isset($_POST["btnActualizar"]))
+{
+
+    $Nombre = $_POST["Nombre"];
+    $PrimApellido = $_POST["PrimerApellido"];
+    $SegApellido = $_POST["SegundoApellido"];
+    $Correo = $_POST["Correo"];
+    $Username = $_POST["NombreUsuario"];
+    $Contrasena = $_POST["Contrasena"];
+    
+
+    ActualizarUsuarioModel($Nombre,  $PrimApellido,  $SegApellido, $Correo, $Username, $Contrasena); 
+   
+    header("Location: ADMINISTRACION.php");  
+}
+
+
 
 ?> 

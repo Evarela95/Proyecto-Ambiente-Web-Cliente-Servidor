@@ -18,3 +18,9 @@ function HabilitarBoton(flag)
 {
     $("#btnIngresar").prop("disabled", flag);
 }
+
+function Redireccion(id)
+{
+    localStorage.setItem('idSeleccionado', id);
+    window.location = "EditarPerfil.php"
+}
