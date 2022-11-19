@@ -1,5 +1,7 @@
 <?php 
 
+if (session_status() == PHP_SESSION_NONE)
+session_start();
 
 if (session_status() == PHP_SESSION_NONE)
 {
@@ -23,7 +25,9 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
 
 <body>
     <?php headerSection(); ?>
-    
+    <ol class="breadcrumb">
+                <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
+            </ol>
     
     <div class="row">
                     <div class="col-md-12 margin-bottom-15">

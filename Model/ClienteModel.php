@@ -8,7 +8,7 @@ function ConsultarDatosUsuarioModel($id)
 {
    $enlace = OpenDB();
     $procedimiento = "CALL ConsultarUserId($id);";
-    $datosU = $enlace -> queary ($procedimiento);
+    $datosU = $enlace -> query ($procedimiento);
 
     CloseDB($enlace);
     return $datosU;
@@ -53,11 +53,11 @@ function RegistrarUsuario($Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$
 
 
 
-function ActualizarUsuarioModel($Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasenna)
+function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasena)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "CALL ActualizarUser('$Nombre','$PrimApellido','$SegApellido','$Correo','$Username','$Contrasenna');";
+    $procedimiento = "CALL ActualizarUser($Id,'$Nombre','$PrimApellido','$SegApellido','$Correo','$Username','$Contrasena');";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);

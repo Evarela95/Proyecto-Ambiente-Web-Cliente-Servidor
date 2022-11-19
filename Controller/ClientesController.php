@@ -9,7 +9,7 @@ include_once __DIR__ . '\..\Model\ClienteModel.php';
 function ConsultarDatosUser($id)
 {
     $datos = ConsultarDatosUsuarioModel($id);
-    return mysqli_fecth_array($datos);
+    return mysqli_fetch_array($datos);
 }
 
 
@@ -49,6 +49,7 @@ function CargarUsuarios()
             echo '<td>' . $resultado["correo"] . '</td>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
             echo '<td>' . $resultado["contrasena"] . '</td>';
+            //echo '<td><img src=' . $resultado["url"] . '</td>';
             echo '<td> 
             <a class="btn btn-primary" href="EditarPerfil.php?q=' . $resultado["id_usuario"]. '">Editar<a/>
             <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Eliminar</a> 
@@ -71,6 +72,9 @@ if(isset($_POST["btnRegistrarse"]))
      RegistrarUsuario($Nombre, $PrimApellido, $SegApellido, $Correo, $Username, $Contrasena);
 }
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if(isset($_POST["btnEliminar"])){
     $datos = EliminarUsuarios();   
 
@@ -88,7 +92,7 @@ if(isset($_POST["btnEliminar"])){
 
 if(isset($_POST["btnActualizar"]))
 {
-
+    $Id = $_POST["txtId"];
     $Nombre = $_POST["Nombre"];
     $PrimApellido = $_POST["PrimerApellido"];
     $SegApellido = $_POST["SegundoApellido"];
@@ -97,7 +101,7 @@ if(isset($_POST["btnActualizar"]))
     $Contrasena = $_POST["Contrasena"];
     
 
-    ActualizarUsuarioModel($Nombre,  $PrimApellido,  $SegApellido, $Correo, $Username, $Contrasena); 
+    ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasena); 
    
     header("Location: ADMINISTRACION.php");  
 }

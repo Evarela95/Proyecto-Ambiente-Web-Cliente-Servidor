@@ -1,4 +1,8 @@
-<?php include_once 'generales.php'; ?>
+<?php include_once 'generales.php';
+
+if (session_status() == PHP_SESSION_NONE)
+session_start();?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +13,9 @@
 
 <body>
     <?php headerSection(); ?>
-
+    <ol class="breadcrumb">
+                <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
+            </ol>
     <!-- banner section start -->
     <!-- product section start -->
     <div class="product_section layout_padding">

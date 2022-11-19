@@ -4,7 +4,7 @@ session_start();
 
 include_once 'generales.php';
 include_once 'Controller/ClientesController.php';
-include_once 'Model/ClientesModel.php';
+//include_once 'Model/ClientesModel.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +14,11 @@ include_once 'Model/ClientesModel.php';
     <?php headerSite(); ?>
 </head>
 
-<ol class="breadcrumb">
+<body>
+    <?php headerSection(); ?>
+    <ol class="breadcrumb">
                 <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
             </ol>
-    <?php headerSection(); ?>
-    
     <!-- banner section start -->
     <div class="banner_section layout_padding">
         <div class="container">
