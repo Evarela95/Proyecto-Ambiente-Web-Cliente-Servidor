@@ -108,4 +108,29 @@ if(isset($_POST["btnActualizar"]))
 
 
 
+
+function CargarMenu()
+{
+    if($_SESSION["sesionTipoUsuario"] == null)
+        header("Location: \index.php");
+
+    $datosMenu = pConsultarMenu($_SESSION["sesionTipoUsuario"]);
+
+    if($datosMenu -> num_rows > 0)
+    {
+        echo '<div class="template-page-wrapper">
+              <div class="navbar-collapse collapse templatemo-sidebar">
+              <ul class="templatemo-sidebar-menu">';
+
+        while($resultado = mysqli_fetch_array($datosMenu))
+        {
+            echo '<li><a href="' . $resultado["redireccion"] .  $resultado["texto"] . '</a></li>';
+        }
+
+       // echo '<li><a href="" data-toggle="modal" data-target="#confirmModal" data-backdrop="static" data-keyboard="false"><i class="fa fa-sign-out"></i>Cerrar Sesión</a></li>
+         //     </ul>
+           //   </div>';
+    }
+}
+
 ?> 

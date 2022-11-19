@@ -15,7 +15,9 @@ include_once 'Controller/ClientesController.php';
 </head>
 
 <body>
-    <?php headerSection(); ?>
+<?php 
+        CargarMenu();
+    ?>
     <ol class="breadcrumb">
                 <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
             </ol>

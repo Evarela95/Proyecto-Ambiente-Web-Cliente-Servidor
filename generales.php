@@ -36,7 +36,7 @@ function headerSite()
       media="screen">';
       
 }
-
+/*
 function headerSection() 
 {
   echo '
@@ -85,7 +85,7 @@ function headerSection()
     </div>
     
     ';
-}
+}*/
  
 function footerSection(){
   echo '

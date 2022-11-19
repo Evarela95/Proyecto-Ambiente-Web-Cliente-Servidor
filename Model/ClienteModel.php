@@ -65,6 +65,16 @@ function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$
 
 
 
+function pConsultarMenu($tipoUsuario)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL pConsultarMenu($tipoUsuario);";
+    $datosMenu = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosMenu;
+}
+
 
 
 
