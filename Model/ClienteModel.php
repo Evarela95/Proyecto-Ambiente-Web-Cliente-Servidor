@@ -22,10 +22,10 @@ function ValidarCredenciales($Usuario, $Contrasena)
     return $datosUsuario;
 }
 
-function ListarProductosModel()
+function ListarProductosModel($q)
 {
     $enlace = OpenDB();
-    $procedimiento = "CALL ListarProductos();";
+    $procedimiento = "CALL ListarProductos($q);";
     $datosProductos = $enlace -> query($procedimiento);
 
     CloseDB($enlace);

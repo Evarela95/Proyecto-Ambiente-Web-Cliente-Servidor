@@ -6,7 +6,7 @@ if (session_status() == PHP_SESSION_NONE)
    include_once __DIR__ . '\generales.php';
    include_once __DIR__ . '\Controller\ClientesController.php';
 
-   $datos = ConsultarDatosUser($_GET["q"]);
+   $datos = ConsultarDatosUser($_SESSION["sesionId"]);
 ?>
 
 <!DOCTYPE html>

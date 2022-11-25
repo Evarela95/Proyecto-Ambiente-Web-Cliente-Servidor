@@ -21,6 +21,7 @@ if(isset($_POST["btnIngresar"]))
     if($datosUsuario -> num_rows > 0)
     {
         $resultado = mysqli_fetch_array($datosUsuario);
+        $_SESSION["sesionId"] = $resultado["id_usuario"];
         $_SESSION["sesionNombre"] = $resultado["nombre"];
         $_SESSION["sesionTipoUsuario"] = $resultado["tipoUsuario"];
         header("Location: index.php");
@@ -31,9 +32,9 @@ if(isset($_POST["btnIngresar"]))
     }
 }
 
-function CargarProductos()
+function CargarProductos($q)
 {
-    $datosProductos = ListarProductosModel();
+    $datosProductos = ListarProductosModel($q);
 
     if($datosProductos -> num_rows > 0)
     {
@@ -43,13 +44,10 @@ function CargarProductos()
             echo '<tr>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
             echo '<td>' . '₡ ' . $resultado ["precio"] . '</td>';
-            echo '<td><img src="' . $resultado["imagen"] . ' "></td>';
+            echo '<td><img src="images/' . $resultado["imagen"] . '" width="200" height="150"></td>';
             echo '<td> 
              <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Agregar al carrito</a> 
-            </td>';
-            
-            //echo '<td><img src=' . $resultado["url"] . '</td>';
-            
+            </td>';            
             echo "</tr>";
         }
     }

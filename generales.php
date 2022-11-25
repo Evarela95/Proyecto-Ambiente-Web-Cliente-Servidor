@@ -58,9 +58,9 @@ function headerSection()
         PRODUCTOS
        </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item" href="consoles.php">CONSOLAS</a>
-                 <a class="dropdown-item" href="computers.php">COMPUTADORAS</a>  
-                 <a class="dropdown-item" href="videogames.php">VIDEO JUEGOS</a>
+                 <a class="dropdown-item" href="products.php?q=1">CONSOLAS</a>
+                 <a class="dropdown-item" href="products.php?q=2">COMPUTADORAS</a>  
+                 
    </div>
        </li>
 
