@@ -1,5 +1,5 @@
 <?php 
-include_once __dir__ . '/generales.php'; 
+include_once __dir__ . '\generales.php'; 
 include_once __DIR__ . '/Controller/ClientesController.php';
 ?>
 

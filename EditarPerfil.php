@@ -1,14 +1,15 @@
 <?php 
 
 if (session_status() == PHP_SESSION_NONE)
-{
     session_start();
-}
+    
    include_once __DIR__ . '\generales.php';
    include_once __DIR__ . '\Controller\ClientesController.php';
 
    $datos = ConsultarDatosUser($_GET["q"]);
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,6 +68,11 @@ if (session_status() == PHP_SESSION_NONE)
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Correo" name="Correo" id="Correo" value=<?php echo $datos["correo"] ?>>
                                     </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="email-bt" placeholder="Estado" name="Estado" id="Estado" value=<?php echo $datos["estado"] ?>>
+                                    </div>
+
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Nombre de usuario"
                                             name="NombreUsuario" id="NombreUsuario"  value=<?php echo $datos["username"] ?>>

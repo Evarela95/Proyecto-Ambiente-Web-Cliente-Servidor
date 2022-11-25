@@ -33,6 +33,33 @@ if(isset($_POST["btnIngresar"]))
 }
 
 
+function CargarProductos()
+{
+    $datosProductos = ListarProductosModel();
+
+    if($datosProductos -> num_rows > 0)
+    {
+        while($resultado = mysqli_fetch_array($datosProductos))
+        {
+            
+            echo '<tr>';
+            echo '<td>' . $resultado["descripcion"] . '</td>';
+            echo '<td>' . '₡ ' . $resultado ["precio"] . '</td>';
+            echo '<td><img src="' . $resultado["imagen"] . ' "></td>';
+            echo '<td> 
+             <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Agregar al carrito</a> 
+            </td>';
+            
+            //echo '<td><img src=' . $resultado["url"] . '</td>';
+            
+            echo "</tr>";
+
+            
+        }
+    }
+}
+
+
 function CargarUsuarios()
 {
     $datosUsuarios = ListarUsuarios();
@@ -47,12 +74,13 @@ function CargarUsuarios()
             echo '<td>' . $resultado["segApellido"] . '</td>';
             echo '<td>' . $resultado["username"] . '</td>';
             echo '<td>' . $resultado["correo"] . '</td>';
+            echo '<td>' . $resultado["estado"] . '</td>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
             echo '<td>' . $resultado["contrasena"] . '</td>';
             //echo '<td><img src=' . $resultado["url"] . '</td>';
             echo '<td> 
             <a class="btn btn-primary" href="EditarPerfil.php?q=' . $resultado["id_usuario"]. '">Editar<a/>
-            <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Eliminar</a> 
+            <a class="btn btn-danger" >Eliminar<a/> 
             </td>';
             
             echo "</tr>";
@@ -106,9 +134,15 @@ if(isset($_POST["btnActualizar"]))
     header("Location: ADMINISTRACION.php");  
 }
 
+if(isset($_POST["btnCerrar"]))
+{
+    if (session_status() != PHP_SESSION_NONE)
+        session_destroy();
 
+        header("Location: index.php");
+}
 
-
+/*
 function CargarMenu()
 {
     if($_SESSION["sesionTipoUsuario"] == null)
@@ -131,6 +165,6 @@ function CargarMenu()
          //     </ul>
            //   </div>';
     }
-}
+}*/
 
 ?> 

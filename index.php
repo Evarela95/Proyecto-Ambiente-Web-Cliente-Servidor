@@ -2,8 +2,8 @@
 if (session_status() == PHP_SESSION_NONE)
 session_start();
 
-include_once 'generales.php';
-include_once 'Controller/ClientesController.php';
+include_once __dir__ . '\generales.php';  
+include_once __DIR__ . '\Controller\ClientesController.php';
 //include_once 'Model/ClientesModel.php';
 ?>
 
@@ -15,9 +15,10 @@ include_once 'Controller/ClientesController.php';
 </head>
 
 <body>
-<?php 
-        CargarMenu();
-    ?>
+
+<!-- header section start -->
+<?php headerSection(); ?>
+    <!-- contact section start -->
     <ol class="breadcrumb">
                 <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
             </ol>

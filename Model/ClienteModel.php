@@ -8,10 +8,10 @@ function ConsultarDatosUsuarioModel($id)
 {
    $enlace = OpenDB();
     $procedimiento = "CALL ConsultarUserId($id);";
-    $datosU = $enlace -> query ($procedimiento);
+    $datos = $enlace -> query ($procedimiento);
 
     CloseDB($enlace);
-    return $datosU;
+    return $datos;
 }
 
 
@@ -25,6 +25,15 @@ function ValidarCredenciales($Usuario, $Contrasena)
     return $datosUsuario;
 }
 
+function ListarProductosModel()
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL ListarProductos();";
+    $datosProductos = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosProductos;
+}
 
 function ListarUsuarios()
 {
@@ -64,7 +73,7 @@ function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$
 }
 
 
-
+/*
 function pConsultarMenu($tipoUsuario)
 {
     $enlace = OpenDB();
@@ -73,7 +82,7 @@ function pConsultarMenu($tipoUsuario)
 
     CloseDB($enlace);
     return $datosMenu;
-}
+}*/
 
 
 

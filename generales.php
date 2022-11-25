@@ -36,29 +36,34 @@ function headerSite()
       media="screen">';
       
 }
-/*
+
 function headerSection() 
 {
+
+    include_once __DIR__ . '\Controller\ClientesController.php';
   echo '
   <!-- header section start -->
-    <div class="header_section">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="header_section"> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
             <div class="logo"><a href="index.php"><img src="images/justgame.png"></a></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span> 
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                         <a class="nav-link" href="consoles.php">CONSOLAS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="computers.php">COMPUTADORAS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="videogames.php">VIDEO JUEGOS</a>
-                    </li>
+                   
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        PRODUCTOS
+       </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <a class="dropdown-item" href="consoles.php">CONSOLAS</a>
+                 <a class="dropdown-item" href="computers.php">COMPUTADORAS</a>  
+                 <a class="dropdown-item" href="videogames.php">VIDEO JUEGOS</a>
+   </div>
+       </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">NOSOTROS</a>
                     </li>
@@ -73,19 +78,27 @@ function headerSection()
                         <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACION</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="EditarPerfil.php">PERFIL</a>
+                        <a class="nav-link" href="EditarPerfilUsuario.php">PERFIL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cart.php">CARRITO</a>
                     </li>
                     
-                </ul>
-            </div>
-        </nav>
+          
 
-        <!-- Example single danger button -->
+                </ul>
+                
+            </div>
+
+
+            
+            <button type="button" class="btn btn-danger btn-sm"  id="btnCerrar" class="btnCerrar">Cerrar sesión</button>
+        </nav>
 
     </div>
     
     ';
-}*/
+}
  
 function footerSection(){
   echo '

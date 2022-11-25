@@ -40,6 +40,7 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
                                     <th>Segundo apellido</th>
                                     <th>Usuario</th>
                                     <th>Correo Electrónico</th>
+                                    <th>Estado</th>
                                     <th>Tipo Usuario</th>
                                     <th>Contraseña</th>
                                     <th>Acciones</th>
