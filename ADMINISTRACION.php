@@ -9,20 +9,13 @@ if (session_status() == PHP_SESSION_NONE)
 }
 include_once __DIR__ . '\generales.php';
 include_once __DIR__ . '.\Controller\ClientesController.php';
-
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <?php headerSite(); ?>
-
-    
 </head>
-
 <body>
     <?php headerSection(); ?>
     <ol class="breadcrumb">
@@ -47,18 +40,14 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
                                 </tr>
                             </thead>
                             <tbody>
-
                                 <?php
                                 CargarUsuarios();
                                 ?>
-
                             </tbody>
                         </table>
 
                     </div>
                 </div>
-
-
         <!-- footer section start -->
         <?php footerSection(); ?>
         <!-- footer section end -->
@@ -69,6 +58,4 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
         <!-- Javascript files-->
         <?php jsSection() ?>
 </body>
-
 </php>
-

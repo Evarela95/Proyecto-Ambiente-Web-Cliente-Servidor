@@ -2,8 +2,6 @@
 
 include_once __DIR__ . '\ConnBD.php';
 
-
-
 function ConsultarDatosUsuarioModel($id)
 {
    $enlace = OpenDB();
@@ -13,7 +11,6 @@ function ConsultarDatosUsuarioModel($id)
     CloseDB($enlace);
     return $datos;
 }
-
 
 function ValidarCredenciales($Usuario, $Contrasena)
 {
@@ -60,8 +57,6 @@ function RegistrarUsuario($Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$
     CloseDB($enlace);
 }
 
-
-
 function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasena)
 {
     $enlace = OpenDB();
@@ -71,7 +66,6 @@ function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$
 
     CloseDB($enlace);
 }
-
 
 /*
 function pConsultarMenu($tipoUsuario)
@@ -83,12 +77,5 @@ function pConsultarMenu($tipoUsuario)
     CloseDB($enlace);
     return $datosMenu;
 }*/
-
-
-
-
-
-
-
 
 ?>

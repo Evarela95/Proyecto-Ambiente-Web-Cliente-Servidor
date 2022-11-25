@@ -9,9 +9,6 @@ if (session_status() == PHP_SESSION_NONE)
 }
 include_once __DIR__ . '\generales.php';
 include_once __DIR__ . '.\Controller\ClientesController.php';
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +25,6 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
             </ol>
     <!-- banner section start -->
     <!-- product section start -->
-    
     <div class="col-md-12 margin-bottom-15">
                     <div class="col-md-12 margin-bottom-15">
 
@@ -50,8 +46,6 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
 
                     </div>
                 </div>
-
-    
     <!-- footer section start -->
     <?php footerSection(); ?>
     <!-- footer section end -->

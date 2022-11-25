@@ -33,12 +33,9 @@ include_once __DIR__ . '/Controller/ClientesController.php';
                                     <div class="form-group">
                                         <input type="submit" value="Ingresar" id="btnIngresar" name="btnIngresar"
                                             class="btn btn-danger">
-                                           
                                     </div>
                                 </form>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

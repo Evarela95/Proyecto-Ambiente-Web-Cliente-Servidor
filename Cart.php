@@ -5,8 +5,6 @@ include_once __DIR__ . '\Controller\ClientesController.php';
 include_once __dir__ . '\generales.php'; 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,15 +18,11 @@ include_once __dir__ . '\generales.php';
                 <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
             </ol>
     <!-- about section start -->
-    
-
-
     <section class="pt-5 pb-5">
   <div class="container">
     <div class="row w-100">
         <div class="col-lg-12 col-md-12 col-12">
             <h3 class="display-5 mb-2 text-center">Lista de compras</h3>
-            
             <table id="shoppingCart" class="table table-condensed table-responsive">
                 <thead>
                     <tr>
@@ -148,5 +142,4 @@ include_once __dir__ . '\generales.php';
     <!-- Javascript files-->
     <?php jsSection() ?>
 </body>
-
 </php>

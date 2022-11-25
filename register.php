@@ -45,7 +45,6 @@ include_once __DIR__ . '\Controller\ClientesController.php';?>
                                     <div class="form-group">
                                         <input type="submit" value="Registrarse" name="btnRegistrarse" id="btnRegistrarse"
                                             class="btn btn-danger">
-
                                     </div>
                                 </form>
                             </div>

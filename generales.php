@@ -83,21 +83,12 @@ function headerSection()
                     <li class="nav-item">
                         <a class="nav-link" href="Cart.php">CARRITO</a>
                     </li>
-                    
-          
-
                 </ul>
-                
             </div>
 
-
-            
             <button type="button" class="btn btn-danger btn-sm"  id="btnCerrar" class="btnCerrar">Cerrar sesión</button>
         </nav>
-
-    </div>
-    
-    ';
+    </div>';
 }
  
 function footerSection(){
@@ -130,9 +121,7 @@ function footerSection(){
               <p class="ipsum_text_2" >Cuenta</p>
               <p class="ipsum_text_2" >Contacto</p>
               </div>
-          </div>
-        
-                            
+          </div>           
           </div>
       </div>
       <div class="social_icon">
@@ -147,7 +136,6 @@ function footerSection(){
 </div>';
 }
 
-
 function copyRightSection(){
     echo 
     '<div class="copyright_section">
@@ -156,7 +144,6 @@ function copyRightSection(){
     </div>';
 
 }
-
 
 function jsSection(){
 
@@ -171,6 +158,5 @@ function jsSection(){
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 ';
 }
-
 
 ?>

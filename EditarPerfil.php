@@ -9,14 +9,11 @@ if (session_status() == PHP_SESSION_NONE)
    $datos = ConsultarDatosUser($_GET["q"]);
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php headerSite(); ?>
-    
 </head>
 
 <body>
@@ -28,18 +25,9 @@ if (session_status() == PHP_SESSION_NONE)
     <div class="templatemo-content-wrapper">
         <div class="templatemo-content">
             
-
             <div class="templatemo-panels">
         
-     
-
-  
-            <!-- contact section start 
-
-
-
-
--->
+            <!-- contact section start -->
     <div class="contact_section layout_padding padding_top_0">
         <div class="container">
             <div class="row">
@@ -86,9 +74,7 @@ if (session_status() == PHP_SESSION_NONE)
                                             class="btn btn-danger">
                                             <a href="MantUsuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                                     </div>
-                                
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -108,9 +94,7 @@ if (session_status() == PHP_SESSION_NONE)
     <!-- Javascript files-->
     <?php jsSection() ?>
 
-    
     <script src="../Proyecto-Ambiente-Web-Cliente-Servidor-main/js/register.js"></script>
-
 
     </form>
 </body>

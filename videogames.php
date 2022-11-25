@@ -3,7 +3,6 @@ include_once __DIR__ . '\Controller\ClientesController.php';
 if (session_status() == PHP_SESSION_NONE)
 session_start();?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,8 +97,6 @@ Incluye un manual a todo color y una cubierta reversible.</p>
                 </div>
             </div>
         </div>
-
-        
     <!-- footer section start -->
     <?php footerSection(); ?>
     <!-- footer section end -->

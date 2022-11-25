@@ -15,7 +15,6 @@ include_once __DIR__ . '\Controller\ClientesController.php';
 </head>
 
 <body>
-
 <!-- header section start -->
 <?php headerSection(); ?>
     <!-- contact section start -->

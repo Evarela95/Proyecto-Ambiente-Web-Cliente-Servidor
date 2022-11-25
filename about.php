@@ -5,8 +5,6 @@ include_once __DIR__ . '\Controller\ClientesController.php';
 include_once __dir__ . '\generales.php'; 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,9 +35,6 @@ include_once __dir__ . '\generales.php';
                         <div class="col-md-6">
                             <div class=""><img src="images/fototienda2.jpg"></div>
                           </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -54,5 +49,4 @@ include_once __dir__ . '\generales.php';
     <!-- Javascript files-->
     <?php jsSection() ?>
 </body>
-
 </php>

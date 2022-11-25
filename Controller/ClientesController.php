@@ -12,7 +12,6 @@ function ConsultarDatosUser($id)
     return mysqli_fetch_array($datos);
 }
 
-
 if(isset($_POST["btnIngresar"]))
 {
     $Usuario = $_POST["Usuario"];
@@ -31,7 +30,6 @@ if(isset($_POST["btnIngresar"]))
         
     }
 }
-
 
 function CargarProductos()
 {
@@ -53,17 +51,13 @@ function CargarProductos()
             //echo '<td><img src=' . $resultado["url"] . '</td>';
             
             echo "</tr>";
-
-            
         }
     }
 }
 
-
 function CargarUsuarios()
 {
     $datosUsuarios = ListarUsuarios();
-
     if($datosUsuarios -> num_rows > 0)
     {
         while($resultado = mysqli_fetch_array($datosUsuarios))
@@ -84,8 +78,6 @@ function CargarUsuarios()
             </td>';
             
             echo "</tr>";
-
-            
         }
     }
 }
@@ -99,8 +91,6 @@ if(isset($_POST["btnRegistrarse"]))
     $Contrasena = $_POST["Contrasena"];
      RegistrarUsuario($Nombre, $PrimApellido, $SegApellido, $Correo, $Username, $Contrasena);
 }
-
-
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if(isset($_POST["btnEliminar"])){
@@ -116,8 +106,6 @@ if(isset($_POST["btnEliminar"])){
     }
 }
 
-
-
 if(isset($_POST["btnActualizar"]))
 {
     $Id = $_POST["txtId"];
@@ -128,7 +116,6 @@ if(isset($_POST["btnActualizar"]))
     $Username = $_POST["NombreUsuario"];
     $Contrasena = $_POST["Contrasena"];
     
-
     ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasena); 
    
     header("Location: ADMINISTRACION.php");  

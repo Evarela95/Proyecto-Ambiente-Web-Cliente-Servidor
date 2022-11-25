@@ -9,8 +9,6 @@ if (session_status() == PHP_SESSION_NONE)
    $datos = ConsultarDatosUser($_GET["q"]);
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,19 +25,8 @@ if (session_status() == PHP_SESSION_NONE)
     
     <div class="templatemo-content-wrapper">
         <div class="templatemo-content">
-            
-
             <div class="templatemo-panels">
-        
-     
-
-  
-            <!-- contact section start 
-
-
-
-
--->
+            <!-- contact section start -->
     <div class="contact_section layout_padding padding_top_0">
         <div class="container">
             <div class="row">
@@ -48,18 +35,16 @@ if (session_status() == PHP_SESSION_NONE)
                         <div class="input_main">
                             <div class="container">
                             <div class="form-group">
-                                    
-                                        <input type="text" class="email-bt" id="txtId" name="txtId" readonly value=<?php echo $datos["id_usuario"] ?> >
+                                        <input type="text" class="email-bt" id="txtId" 
+                                        name="txtId" readonly value=<?php echo $datos["id_usuario"] ?> >
                                     </div>        
-                            <div class="form-group">
-                                    
-                                        <input type="text" class="email-bt"  placeholder="Nombre" id="Nombre" name="Nombre"
-                                        value=<?php echo $datos["nombre"] ?>>
+                                    <div class="form-group">
+                                        <input type="text" class="email-bt"  placeholder="Nombre" id="Nombre" 
+                                        name="Nombre" value=<?php echo $datos["nombre"] ?>>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Primero apellido"
-                                            name="PrimerApellido" id="PrimerApellido"  value=<?php echo $datos["primApellido"] ?>>
-                                                                                    
+                                            name="PrimerApellido" id="PrimerApellido"  value=<?php echo $datos["primApellido"] ?>>                                      
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Segundo apellido"
@@ -81,7 +66,6 @@ if (session_status() == PHP_SESSION_NONE)
                                             class="btn btn-danger">
                                             <a href="MantUsuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                                     </div>
-                                
                             </div>
 
                         </div>
@@ -103,9 +87,7 @@ if (session_status() == PHP_SESSION_NONE)
     <!-- Javascript files-->
     <?php jsSection() ?>
 
-    
     <script src="../Proyecto-Ambiente-Web-Cliente-Servidor-main/js/register.js"></script>
-
 
     </form>
 </body>
