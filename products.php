@@ -18,14 +18,23 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
 <body>
     <?php headerSection(); ?>
     <ol class="breadcrumb">
-        <li> <?php echo $_SESSION["sesionNombre"]; ?></li>
+
+        <li>
+            <?php
+                    if(isset($_SESSION["sesionNombre"]))
+                    {
+                       echo $_SESSION["sesionNombre"]; 
+                    }
+                    ?>
+        </li>
+
     </ol>
     <!-- banner section start -->
     <!-- product section start -->
     <div class="col-md-12 margin-bottom-15">
         <div class="col-md-12 margin-bottom-15">
 
-        <?php
+            <?php
 if ($_GET["q"] == 1)
    echo "<h1>Consolas</h1>";
 elseif($_GET["q"] == 2)
@@ -58,3 +67,24 @@ elseif($_GET["q"] == 2)
 </body>
 
 </php>
+
+<script>
+
+function addProduct(id_producto)
+{
+
+    $.ajax({
+        url:"Controller/ClientesController.php",
+        type:"POST",
+        data: { 
+                "btnAddProduct" : "btnAddProduct", 
+                "id_producto" : id_producto
+              },
+        success:function(data){
+            //window.location.href = "mantUsuarios.php";
+        },
+    });
+
+}
+
+</script>

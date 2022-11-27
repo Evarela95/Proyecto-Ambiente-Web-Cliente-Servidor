@@ -67,6 +67,16 @@ function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$
     CloseDB($enlace);
 }
 
+function AddProductModel($id_usuario, $id_producto, $cantidad)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "CALL InsertarCarrito($id_usuario,$id_producto,$cantidad);";
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
 /*
 function pConsultarMenu($tipoUsuario)
 {

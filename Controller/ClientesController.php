@@ -42,12 +42,10 @@ function CargarProductos($q)
         {
             
             echo '<tr>';
-            echo '<td>' . $resultado["descripcion"] . '</td>';
-            echo '<td>' . '₡ ' . $resultado ["precio"] . '</td>';
-            echo '<td><img src="images/' . $resultado["imagen"] . '" width="200" height="150"></td>';
-            echo '<td> 
-             <a class="btn btn-primary" data-toggle="modal" data-target="#confirmDelete" data-backdrop="static" data-keyboard="false">Agregar al carrito</a> 
-            </td>';            
+            echo '<td width=20%>' . $resultado["descripcion"] . '</td>';
+            echo '<td width=20%>' . '₡ ' . $resultado ["precio"] . '</td>';
+            echo '<td width=20% style="text-align:center"><img src="images/' . $resultado["imagen"] . '" width="200" height="150"></td>';       
+            echo '<td width=20%> <input type="button" onclick="addProduct('.  $resultado["id_producto"].', )" class="btn btn-primary" value="Agregar"> </td>';       
             echo "</tr>";
         }
     }
@@ -125,6 +123,12 @@ if(isset($_POST["btnCerrar"]))
         session_destroy();
 
         header("Location: index.php");
+}
+
+if(isset($_POST['btnAddProduct']))
+{
+    $id_producto = $_POST["id_producto"];
+    AddProductModel($_SESSION["sesionId"], $id_producto, 1);
 }
 
 /*

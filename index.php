@@ -19,7 +19,12 @@ include_once __DIR__ . '\Controller\ClientesController.php';
 <?php headerSection(); ?>
     <!-- contact section start -->
     <ol class="breadcrumb">
-                <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
+                <li> 
+                    <?php 
+                    if(isset($_SESSION["sesionNombre"]))
+                       echo $_SESSION["sesionNombre"]; 
+                    ?> 
+                </li>
             </ol>
     <!-- banner section start -->
     <div class="banner_section layout_padding">

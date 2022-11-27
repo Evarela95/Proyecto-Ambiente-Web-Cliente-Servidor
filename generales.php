@@ -76,18 +76,27 @@ function headerSection()
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACION</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="EditarPerfilUsuario.php">PERFIL</a>
-                    </li>
-                    <li class="nav-item">
+                    </li>';
+
+                    if(isset($_SESSION["sesionId"]))
+                    {
+                      echo '<li class="nav-item">
+                          <a class="nav-link" href="EditarPerfilUsuario.php">PERFIL</a>
+                       </li>';
+                    }
+
+                    echo '<li class="nav-item">
                         <a class="nav-link" href="Cart.php">CARRITO</a>
                     </li>
                 </ul>
-            </div>
+            </div>';
 
-            <button type="button" class="btn btn-danger btn-sm"  id="btnCerrar" class="btnCerrar">Cerrar sesión</button>
-        </nav>
+            if(isset($_SESSION["sesionId"]))
+                    {
+                      echo '<button type="button" class="btn btn-danger btn-sm"  id="btnCerrar" class="btnCerrar">Cerrar sesión</button>';
+                    }
+
+            echo '</nav>
     </div>';
 }
  
