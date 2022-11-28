@@ -70,7 +70,7 @@ function CargarUsuarios()
             //echo '<td><img src=' . $resultado["url"] . '</td>';
             echo '<td> 
             <a class="btn btn-primary" href="EditarPerfil.php?q=' . $resultado["id_usuario"]. '">Editar<a/>
-            <a class="btn btn-danger" >Eliminar<a/> 
+            <a class="btn open-UserDialog" data-toggle="modal" data-target="#DeleteUserModal" data-id=' . $resultado["id_usuario"] . '>Inactivar</a></td>;
             </td>';
             
             echo "</tr>";
@@ -88,18 +88,10 @@ if(isset($_POST["btnRegistrarse"]))
      RegistrarUsuario($Nombre, $PrimApellido, $SegApellido, $Correo, $Username, $Contrasena);
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-if(isset($_POST["btnEliminar"])){
-    $datos = EliminarUsuarios();   
-
-    if($datos -> num_rows > 0)
-    {
-        while($fila = mysqli_fetch_array($datos))
-        {
-            if($Id == $fila["id_usuario"])
-            EliminarUsuarios($Id);
-        }
-    }
+if(isset($_POST["InactivarUsuario"]))
+{
+    $Id = $_POST["Id"];
+    InactivarUsuarioModel($Id);  
 }
 
 if(isset($_POST["btnActualizar"]))

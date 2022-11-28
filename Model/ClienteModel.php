@@ -77,6 +77,16 @@ function AddProductModel($id_usuario, $id_producto, $cantidad)
     CloseDB($enlace);
 }
 
+function InactivarUsuarioModel($Id)
+{
+    $enlace = OpenDB();
+    $procedimiento = "call InactivarUsuario($Id);";
+
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
 /*
 function pConsultarMenu($tipoUsuario)
 {
