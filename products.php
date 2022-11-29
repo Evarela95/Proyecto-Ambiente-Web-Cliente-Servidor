@@ -36,9 +36,19 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
 
             <?php
 if ($_GET["q"] == 1)
-   echo "<h1>Consolas</h1>";
+   echo "<h1>Consolas Play Station</h1>";
 elseif($_GET["q"] == 2)
-   echo "<h1>Computadoras</h1>";
+   echo "<h1>Juegos Ps 4</h1>";
+elseif($_GET["q"] == 3)
+   echo "<h1>Juegos Ps 5</h1>";
+   elseif($_GET["q"] == 4)
+   echo "<h1>Consolas Xbox</h1>";
+   elseif($_GET["q"] == 5)
+   echo "<h1>Juegos Xbox</h1>";
+   elseif($_GET["q"] == 7)
+   echo "<h1>PC Gamer</h1>";
+   elseif($_GET["q"] == 8)
+   echo "<h1>Juegos PC</h1>";
 ?>
 
             <table class="table table-bordered table-hover">

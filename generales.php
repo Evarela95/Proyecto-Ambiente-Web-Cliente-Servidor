@@ -55,11 +55,22 @@ function headerSection()
                    
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        PRODUCTOS
+                 PRODUCTOS
        </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item" href="products.php?q=1">CONSOLAS</a>
-                 <a class="dropdown-item" href="products.php?q=2">COMPUTADORAS</a>  
+                 <div class="dropdown-item" href=""><img src="images/ps-logo-de-juegos.png" alt="Imagen">PLAY STATION</div>
+                 <a class="dropdown-item" href="products.php?q=1">CONSOLAS PS</a>
+                 <a class="dropdown-item" href="products.php?q=2">JUEGOS PS4</a>
+                 <a class="dropdown-item" href="products.php?q=3">JUEGOS PS5</a> 
+
+                 <div class="dropdown-item" href=""><img src="images/logotipo-de-xbox.png" alt="Imagen">XBOX</div>
+                 <a class="dropdown-item" href="products.php?q=4">CONSOLAS XBOX</a>
+                 <a class="dropdown-item" href="products.php?q=5">JUEGOS XBOX</a>
+          
+
+                 <div class="dropdown-item" href="" none><img src="images/videojuego.png" alt="Imagen none">COMPUTADORAS</div>
+                 <a class="dropdown-item" href="products.php?q=7">PC GAMER</a>
+                 <a class="dropdown-item" href="products.php?q=8">JUEGOS PC</a>
                  
    </div>
        </li>
