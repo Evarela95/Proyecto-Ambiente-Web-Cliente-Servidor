@@ -34,7 +34,7 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
     <div class="col-md-12 margin-bottom-15">
         <div class="col-md-12 margin-bottom-15">
 
-            <?php
+        <?php
 if ($_GET["q"] == 1)
    echo "<h1>Consolas Play Station</h1>";
 elseif($_GET["q"] == 2)
