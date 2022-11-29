@@ -95,19 +95,21 @@ function headerSection()
                           <a class="nav-link" href="EditarPerfilUsuario.php">PERFIL</a>
                        </li>';
                     }
-
+                    
+                    if(isset($_SESSION["sesionId"]))
+                    {
                     echo '<li class="nav-item">
                         <a class="nav-link" href="Cart.php">CARRITO</a>
-                    </li>
-                </ul>
-            </div>';
+                        </li>';}
+                    echo '</ul>
+                </div>';
 
-            if(isset($_SESSION["sesionId"]))
+                    if(isset($_SESSION["sesionId"]))
                     {
                       echo '<button type="button" class="btn btn-danger btn-sm"  id="btnCerrar" class="btnCerrar">Cerrar sesión</button>';
                     }
 
-            echo '</nav>
+                 echo '</nav>
     </div>';
 }
  

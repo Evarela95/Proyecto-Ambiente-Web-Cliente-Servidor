@@ -26,12 +26,18 @@ include_once __DIR__ . '\Controller\ClientesController.php';
     ?>
 
     <ol class="breadcrumb">
-                <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
+                <li> 
+                    <?php
+                    if(isset($_SESSION["sesionNombre"]))
+                    {
+                       echo $_SESSION["sesionNombre"]; 
+                    }
+                    ?> 
+                </li>
             </ol>
     
     <div class="row">
                     <div class="col-md-12 margin-bottom-15">
-
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>

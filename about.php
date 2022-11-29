@@ -15,7 +15,14 @@ include_once __dir__ . '\generales.php';
 <body>
 <?php headerSection(); ?>
 <ol class="breadcrumb">
-                <li> <?php echo $_SESSION["sesionNombre"]; ?> </li>
+                <li> 
+                    <?php
+                    if(isset($_SESSION["sesionNombre"]))
+                    {
+                       echo $_SESSION["sesionNombre"]; 
+                    }
+                    ?> 
+                </li>
             </ol>
     <!-- about section start -->
     <div class="about_section layout_padding">

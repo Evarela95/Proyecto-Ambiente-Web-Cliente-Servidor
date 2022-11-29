@@ -45,9 +45,9 @@ elseif($_GET["q"] == 3)
    echo "<h1>Consolas Xbox</h1>";
    elseif($_GET["q"] == 5)
    echo "<h1>Juegos Xbox</h1>";
-   elseif($_GET["q"] == 7)
+   elseif($_GET["q"] == 6)
    echo "<h1>PC Gamer</h1>";
-   elseif($_GET["q"] == 8)
+   elseif($_GET["q"] == 7)
    echo "<h1>Juegos PC</h1>";
 ?>
 
