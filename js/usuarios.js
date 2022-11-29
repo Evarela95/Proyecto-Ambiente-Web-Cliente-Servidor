@@ -1,6 +1,6 @@
 //Funciones de ADMINISTRACIÓN
 $(document).on("click", ".open-UserDialog", function () {
-    var myUserId = $(this).data('id');
+    var myUserId = $(this).data('id_usuario');
     $("#userId").val(myUserId);
 });
 

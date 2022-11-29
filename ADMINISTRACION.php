@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE)
     session_start();
 }
 include_once __DIR__ . '\generales.php';
-include_once __DIR__ . '.\Controller\ClientesController.php';
+include_once __DIR__ . '\Controller\ClientesController.php';
 ?>
 
 <!DOCTYPE html>
