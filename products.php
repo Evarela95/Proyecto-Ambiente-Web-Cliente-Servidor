@@ -34,7 +34,7 @@ include_once __DIR__ . '.\Controller\ClientesController.php';
     <div class="col-md-12 margin-bottom-15">
         <div class="col-md-12 margin-bottom-15">
 
-            <?php
+        <?php
 if ($_GET["q"] == 1)
    echo "<h1>Consolas Play Station</h1>";
 elseif($_GET["q"] == 2)
@@ -45,9 +45,9 @@ elseif($_GET["q"] == 3)
    echo "<h1>Consolas Xbox</h1>";
    elseif($_GET["q"] == 5)
    echo "<h1>Juegos Xbox</h1>";
-   elseif($_GET["q"] == 7)
+   elseif($_GET["q"] == 6)
    echo "<h1>PC Gamer</h1>";
-   elseif($_GET["q"] == 8)
+   elseif($_GET["q"] == 7)
    echo "<h1>Juegos PC</h1>";
 ?>
 
