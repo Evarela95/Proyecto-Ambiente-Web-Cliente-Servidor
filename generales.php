@@ -69,8 +69,8 @@ function headerSection()
           
 
                  <div class="dropdown-item" href="" none><img src="images/videojuego.png" alt="Imagen none">COMPUTADORAS</div>
-                 <a class="dropdown-item" href="products.php?q=7">PC GAMER</a>
-                 <a class="dropdown-item" href="products.php?q=8">JUEGOS PC</a>
+                 <a class="dropdown-item" href="products.php?q=6">PC GAMER</a>
+                 <a class="dropdown-item" href="products.php?q=7">JUEGOS PC</a>
                  
    </div>
        </li>
