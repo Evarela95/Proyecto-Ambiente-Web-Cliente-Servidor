@@ -6,6 +6,7 @@ if (session_status() == PHP_SESSION_NONE)
 }
 include_once __DIR__ . '\..\Model\ClienteModel.php';
 
+
 function ConsultarDatosUser($id)
 {
     $datos = ConsultarDatosUsuarioModel($id);
@@ -109,19 +110,16 @@ if(isset($_POST["btnActualizar"]))
     header("Location: ADMINISTRACION.php");  
 }
 
-if(isset($_POST["btnCerrar"]))
-{
-    if (session_status() != PHP_SESSION_NONE)
-        session_destroy();
-
-        header("Location: index.php");
-}
 
 if(isset($_POST['btnAddProduct']))
 {
     $id_producto = $_POST["id_producto"];
     AddProductModel($_SESSION["sesionId"], $id_producto, 1);
 }
+
+
+
+
 
 /*
 function CargarMenu()
@@ -148,4 +146,17 @@ function CargarMenu()
     }
 }*/
 
-?> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>

@@ -101,15 +101,29 @@ function headerSection()
                     echo '<li class="nav-item">
                         <a class="nav-link" href="Cart.php">CARRITO</a>
                         </li>';}
-                    echo '</ul>
+                     
+                     
+                    
+                      if(isset($_SESSION["sesionId"]))
+                      {
+                       
+                    echo ' <li class="nav-item">
+                     <a class="nav-link"<i class="fa fa-sign-out" href="cerrarsesion.php">Cerrar Sesion</a></i>
+                     </li>';
+                     
+                      } echo'
+                     
+                     </ul>
+                     
                 </div>';
+                
 
-                    if(isset($_SESSION["sesionId"]))
-                    {
-                      echo '<button type="button" class="btn btn-danger btn-sm"  id="btnCerrar" class="btnCerrar">Cerrar sesión</button>';
-                    }
+                echo'
+         </div>
+            
+         
 
-                 echo '</nav>
+          </nav>
     </div>';
 }
  
@@ -180,5 +194,42 @@ function jsSection(){
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 ';
 }
+
+
+
+function modal()
+  {
+    
+    include_once __DIR__ . '\Controller\UtilidadesController.php';
+
+    echo '<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>¿Está seguro que quiere cerrar sesión?</h4>
+              </div>
+              <div class="modal-footer">
+                <form action="" method="post">
+                  <input type="submit" value="Sí" id="btnCerrar" name="btnCerrar" class="btn btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>';
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
