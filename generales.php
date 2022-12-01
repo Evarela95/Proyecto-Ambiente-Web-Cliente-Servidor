@@ -108,7 +108,7 @@ function headerSection()
                       {
                        
                     echo ' <li class="nav-item">
-                     <a class="nav-link"<i class="fa fa-sign-out" href="cerrarsesion.php">Cerrar Sesion</a></i>
+                     <a class="btn btn-danger"<i class="fa fa-sign-out" href="cerrarsesion.php">Cerrar Sesion</a></i>
                      </li>';
                      
                       } echo'
