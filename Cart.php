@@ -40,19 +40,24 @@ include_once __dir__ . '\generales.php';
                     </tr>
                 </thead>
                 <tbody>
-                    
-     
+
+                    <?php
+                    CargarCarrito();
+                    ?>
 
                 </tbody>
             </table>
             <div class="float-right text-right">
                 <h4>Subtotal:</h4>
-                <h1>$99.00</h1>
+                <?php
+                    CargarTotal();
+                    ?> 
             </div>
         </div>
     </div>
     <div class="row mt-4 d-flex align-items-center">
         <div class="col-sm-6 order-md-2 text-right">
+            <a href="Cart.php" id="Eliminar" name="Eliminar" class="btn btn-danger mb-4 btn-lg pl-5 pr-5">VACIAR</a>
             <a href="catalog.html" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">PAGAR</a>
         </div>
         <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">

@@ -87,6 +87,35 @@ function InactivarUsuarioModel($Id)
     CloseDB($enlace);
 }
 
+function LlenarTablaCarritoModel($IdUsuario)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL LlenarTablaCarrito($IdUsuario);";
+    $datosCarrito = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosCarrito;
+}
+
+function ConsultarTotalModel($IdUsuario)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL ConsultarTotal($IdUsuario);";
+    $datosCarritoTotal = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosCarritoTotal;
+}
+
+function EliminarCarritoModel($IdUsuario)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL EliminarCarrito($IdUsuario);";
+    $datosCarro = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
 /*
 function pConsultarMenu($tipoUsuario)
 {

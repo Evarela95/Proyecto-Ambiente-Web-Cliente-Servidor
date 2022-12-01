@@ -117,8 +117,47 @@ if(isset($_POST['btnAddProduct']))
     AddProductModel($_SESSION["sesionId"], $id_producto, 1);
 }
 
+function CargarCarrito()
+{
+    $datosCarrito = LlenarTablaCarritoModel($_SESSION["sesionId"]);
+    if($datosCarrito -> num_rows > 0)
+    {
+        while($resultado = mysqli_fetch_array($datosCarrito))
+        {
+            echo '<tr>';
+            echo '<td>' . $resultado["descripcion"] . '</td>';
+            echo '<td>' . $resultado["precio"] . '</td>';
+            echo '<td> <button class="btn btn-danger btn-sm"> - </button> </td>';
+            echo '<td>' . $resultado["cantidad"] . '</td>';
+            echo '<td> <button class="btn btn-info btn-sm"> + </button></td>';
 
+            
+           
+        }
+    }
+}
 
+function CargarTotal()
+{
+    $datosCarritoTotal = ConsultarTotalModel($_SESSION["sesionId"]);
+    if($datosCarritoTotal -> num_rows > 0)
+    {
+        while($resultado = mysqli_fetch_array($datosCarritoTotal))
+        {
+            echo '<tr>';
+            echo '<td>' . '₡ ' .$resultado["Total"] . '</td>';
+            echo '<td>
+            </td>';
+            echo "</tr>";
+        }
+    }
+}
+
+if(isset($_POST["Eliminar"]))
+{
+    $IdUsuario = $_POST["id_usuario"];
+    EliminarCarritoModel($IdUsuario);  
+}
 
 
 /*
