@@ -77,10 +77,10 @@ function AddProductModel($id_usuario, $id_producto, $cantidad)
     CloseDB($enlace);
 }
 
-function InactivarUsuarioModel($Id)
+function InactivarUsuarioModel($Id_usuario)
 {
     $enlace = OpenDB();
-    $procedimiento = "call InactivarUsuario($Id);";
+    $procedimiento = "call InactivarUsuario($Id_usuario);";
 
     $enlace -> query($procedimiento);
 

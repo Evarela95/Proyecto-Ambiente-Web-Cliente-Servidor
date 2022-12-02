@@ -91,7 +91,7 @@ if(isset($_POST["btnRegistrarse"]))
 
 if(isset($_POST["InactivarUsuario"]))
 {
-    $Id = $_POST["Id"];
+    $Id = $_POST["Id_usuario"];
     InactivarUsuarioModel($Id);  
 }
 
