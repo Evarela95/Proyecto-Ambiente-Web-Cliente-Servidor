@@ -200,7 +200,7 @@ function jsSection(){
 function modal()
   {
     
-    include_once __DIR__ . '\Controller\UtilidadesController.php';
+    include_once __DIR__ . '\Controller\ClientesController.php';
 
     echo '<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -211,7 +211,7 @@ function modal()
               </div>
               <div class="modal-footer">
                 <form action="" method="post">
-                  <input type="submit" value="Sí" id="btnCerrar" name="btnCerrar" class="btn btn-primary">
+                  <input type="submit" value="SI" id="btnCerrar" name="btnCerrar" class="btn btn-primary">
                 </form>
               </div>
             </div>

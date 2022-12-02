@@ -7,7 +7,7 @@ $(document).on("click", ".open-UserDialog", function () {
 function InactivarUsuario()
 {
     $.ajax({
-        url:"../Controller/ClientesController.php",
+        url:"./Controller/ClientesController.php",
         type:"POST",
         data: { 
                 "InactivarUsuario" : "InactivarUsuario", 

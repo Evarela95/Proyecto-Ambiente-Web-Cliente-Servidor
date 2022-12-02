@@ -160,11 +160,10 @@ if(isset($_POST["Eliminar"]))
 }
 
 
-/*
 function CargarMenu()
 {
     if($_SESSION["sesionTipoUsuario"] == null)
-        header("Location: \index.php");
+        header("Location: index.php");
 
     $datosMenu = pConsultarMenu($_SESSION["sesionTipoUsuario"]);
 
@@ -183,7 +182,7 @@ function CargarMenu()
          //     </ul>
            //   </div>';
     }
-}*/
+}
 
 
 
