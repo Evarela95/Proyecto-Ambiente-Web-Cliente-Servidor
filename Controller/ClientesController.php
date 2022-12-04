@@ -44,9 +44,17 @@ function CargarProductos($q)
             
             echo '<tr>';
             echo '<td width=20%>' . $resultado["descripcion"] . '</td>';
-            echo '<td width=20%>' . '₡ ' . $resultado ["precio"] . '</td>';
+            echo '<td width=20%> ₡ ' . number_format($resultado ["precio"]) . '</td>';
             echo '<td width=20% style="text-align:center"><img src="images/' . $resultado["imagen"] . '" width="200" height="150"></td>';       
-            echo '<td width=20%> <input type="button" onclick="addProduct('.  $resultado["id_producto"].', )" class="btn btn-primary" value="Agregar"> </td>';       
+           
+            if(isset($_SESSION["sesionId"]))
+            {
+                echo '<td width=20%> <input type="button" onclick="addProduct('.  $resultado["id_producto"].', )" class="btn btn-primary" value="Agregar"> </td>';       
+           
+            }
+           
+           
+           
             echo "</tr>";
         }
     }
@@ -126,9 +134,9 @@ function CargarCarrito()
         {
             echo '<tr>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
-            echo '<td>' . $resultado["precio"] . '</td>';
+            echo '<td> ₡ ' . number_format($resultado["precio"]) . '</td>';
             echo '<td> <button class="btn btn-danger btn-sm"> - </button> </td>';
-            echo '<td>' . $resultado["cantidad"] . '</td>';
+            echo '<td>' . number_format($resultado["cantidad"]) . '</td>';
             echo '<td> <button class="btn btn-info btn-sm"> + </button></td>';
 
             
@@ -142,22 +150,37 @@ function CargarTotal()
     $datosCarritoTotal = ConsultarTotalModel($_SESSION["sesionId"]);
     if($datosCarritoTotal -> num_rows > 0)
     {
-        while($resultado = mysqli_fetch_array($datosCarritoTotal))
-        {
-            echo '<tr>';
-            echo '<td>' . '₡ ' .$resultado["Total"] . '</td>';
-            echo '<td>
-            </td>';
-            echo "</tr>";
-        }
+        $resultado = mysqli_fetch_array($datosCarritoTotal);
+        return $resultado["Total"];
     }
+    return 0;
 }
 
-if(isset($_POST["Eliminar"]))
+function CargarImpuesto()
 {
-    $IdUsuario = $_POST["id_usuario"];
+    $datosCarritoTotal = ConsultarTotalModel($_SESSION["sesionId"]);
+    if($datosCarritoTotal -> num_rows > 0)
+    {
+        $resultado = mysqli_fetch_array($datosCarritoTotal);
+        return $resultado["Total"];
+    }
+    return 0;
+}
+
+if(isset($_POST["btnEliminar"]))
+{
+    $IdUsuario = $_SESSION["sesionId"];
     EliminarCarritoModel($IdUsuario);  
 }
+
+
+if(isset($_POST["btnPagar"]))
+{
+    $IdUsuario = $_SESSION["sesionId"];
+    $Total = $_POST["txtTotal"];
+    PagarCarritoModel($IdUsuario, $Total);  
+}
+
 
 
 function CargarMenu()
@@ -186,7 +209,23 @@ function CargarMenu()
 
 
 
+function ListarTiposUsuario($tipo)
+{
+    $datos = ListarTiposUsuarioModel();   
 
+    if($datos -> num_rows > 0)
+    {
+        echo '<option selected value=""> Seleccione... </option>';
+
+        while($fila = mysqli_fetch_array($datos))
+        {
+            if($tipo == $fila["tipoUsuario"])
+                echo '<option selected value="' . $fila["tipoUsuario"] . '">' . $fila["descripcion"] . '</option>';
+            else
+                echo '<option value="' . $fila["tipoUsuario"] . '">' . $fila["descripcion"] . '</option>';
+        }
+    }
+}
 
 
 

@@ -77,17 +77,28 @@ function headerSection()
 
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">NOSOTROS</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="login.php">INGRESAR</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.php">REGISTRARSE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACION</a>
                     </li>';
+
+                    
+                    if(!isset($_SESSION["sesionId"]))
+                    {
+                      echo '<li class="nav-item active">
+                      <a class="nav-link" href="login.php">INGRESAR</a>
+                  </li>';
+
+                  echo '<li class="nav-item">
+                  <a class="nav-link" href="register.php">REGISTRARSE</a>
+              </li>';
+                    }
+
+                    if(isset($_SESSION["sesionId"]))
+                    {
+                      echo '<li class="nav-item">
+                      <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACION</a>
+                  </li>';
+                    }
+                    
+                    
 
                     if(isset($_SESSION["sesionId"]))
                     {

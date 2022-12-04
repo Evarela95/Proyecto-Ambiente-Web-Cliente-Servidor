@@ -69,18 +69,28 @@ if (session_status() == PHP_SESSION_NONE)
                                         <input type="password" class="email-bt" placeholder="Contraseña"
                                             name="Contrasena" id="Contrasena" value=<?php echo $datos["contrasena"] ?>>
                                     </div>
+                                    <div class="row">
+                    
                                     <div class="form-group">
                                         <input type="submit" value="Actualizar" name="btnActualizar" id="btnActualizar"
                                             class="btn btn-danger">
                                             <a href="MantUsuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                                     </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="image_6"><img src="images/img-6.png"></div>
-                </div>
+                <div class="form-group">
+                    </div>
+                    <div class="col-md-3 margin-bottom-15">
+                        <label for="lblTipoUsuario" class="control-label">Tipo de Usuario</label>
+                        <select class="form-control" id="cboTipoUsuario" name="cboTipoUsuario" required>
+                                <?php 
+                                ListarTiposUsuario($datos["tipoUsuario"]); 
+                                ?>
+                            </select>  
+                    </div>
             </div>
         </div>
     </div>

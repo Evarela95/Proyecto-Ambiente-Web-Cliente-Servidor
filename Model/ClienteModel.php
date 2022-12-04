@@ -116,7 +116,26 @@ function EliminarCarritoModel($IdUsuario)
     CloseDB($enlace);
 }
 
-/*
+function PagarCarritoModel($IdUsuario, $Total)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL PagarCarrito($IdUsuario, $Total);";
+    $datosCarro = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
+function ListarTiposUsuarioModel()
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "call ListarTiposUsuario();";
+    $datos = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datos;
+}
+
 function pConsultarMenu($tipoUsuario)
 {
     $enlace = OpenDB();
@@ -125,6 +144,6 @@ function pConsultarMenu($tipoUsuario)
 
     CloseDB($enlace);
     return $datosMenu;
-}*/
+}
 
 ?>
