@@ -76,16 +76,33 @@ function CargarUsuarios()
             echo '<td>' . $resultado["estado"] . '</td>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
             echo '<td>' . $resultado["contrasena"] . '</td>';
-            //echo '<td><img src=' . $resultado["url"] . '</td>';
-            echo '<td> 
-            <a class="btn btn-primary" href="EditarPerfil.php?q=' . $resultado["id_usuario"]. '">Editar<a/>
-            <a class="btn open-UserDialog" data-toggle="modal" data-target="#DeleteUserModal" data-id=' . $resultado["id_usuario"] . '>Inactivar</a></td>;
-            </td>';
             
-            echo "</tr>";
+            if($_SESSION["sesionId"] != $resultado["id_usuario"])
+            echo '<td><a class="btn" href="EditarPerfil.php?q=' . $resultado["id_usuario"] . '">Actualizar<a/>';
+        else
+            echo '<td><a class="btn" style="cursor: not-allowed">Actualizar<a/>';
+
+        if($_SESSION["sesionId"] != $resultado["id_usuario"])
+            echo '<a class="btn open-UserDialog" data-toggle="modal" data-target="#DeleteUserModal" data-id=' . $resultado["id_usuario"] . '>Eliminar</a></td>';
+        else
+            echo '<a class="btn" style="cursor: not-allowed">Eliminar</a></td>';
+
+        echo "</tr>";
+            
         }
     }
 }
+
+
+
+if(isset($_POST["eliminarUser"]))
+{
+    $Id = $_POST["Id"];
+    eliminarUser($Id);  
+}
+
+
+
 
 if(isset($_POST["btnRegistrarse"]))
 {   $Nombre = $_POST["Nombre"];
@@ -135,15 +152,22 @@ function CargarCarrito()
             echo '<tr>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
             echo '<td> ₡ ' . number_format($resultado["precio"]) . '</td>';
-            echo '<td> <button class="btn btn-danger btn-sm"> - </button> </td>';
-            echo '<td>' . number_format($resultado["cantidad"]) . '</td>';
-            echo '<td> <button class="btn btn-info btn-sm"> + </button></td>';
+            echo '<td> <button class="btn btn-danger btn-sm" id = "resta" name ="resta"> - </button> </td>';
+            echo '<td <button id="cantidad" name="cantidad">' . number_format($resultado["cantidad"]) . '</button></td>';
+            echo '<td> <button class="btn btn-info btn-sm" id = "suma" name ="suma"> + </button></td>';
 
-            
+            if(isset($_POST["resta"]))
+{   $Cantidad = number_format($resultado["cantidad"]);
+     RegistrarUsuario($_SESSION["sesionId"],$Cantidad);
+}
            
         }
     }
 }
+
+
+
+
 
 function CargarTotal()
 {
@@ -226,9 +250,6 @@ function ListarTiposUsuario($tipo)
         }
     }
 }
-
-
-
 
 
 

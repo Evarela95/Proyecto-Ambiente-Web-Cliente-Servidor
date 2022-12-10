@@ -146,4 +146,27 @@ function pConsultarMenu($tipoUsuario)
     return $datosMenu;
 }
 
+
+
+function RestarModel($Id,$Cantidad)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "CALL ReducirCantidad($Id,$Cantidad);";
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
+
+
+function eliminarUser($Id)
+{
+    $enlace = OpenDB();
+    $procedimiento = "call EliminarUsuario($Id);";
+
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
 ?>
