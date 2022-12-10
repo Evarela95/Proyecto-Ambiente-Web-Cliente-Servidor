@@ -4,13 +4,22 @@ $(document).on("click", ".open-UserDialog", function () {
     $("#userId").val(myUserId);
 });
 
-function InactivarUsuario()
+
+
+
+$(document).on("click", ".open-UserDialog", function () {
+    var myUserId = $(this).data('id_usuario');
+    $("#userId").val(myUserId);
+});
+
+
+function eliminarUser()
 {
     $.ajax({
-        url:"./Controller/ClientesController.php",
+        url:"../Controller/ClientesController.php",
         type:"POST",
         data: { 
-                "InactivarUsuario" : "InactivarUsuario", 
+                "eliminarUser" : "eliminarUser", 
                 "Id" : document.getElementById("userId").value 
               },
         success:function(data){

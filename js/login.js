@@ -16,6 +16,7 @@ function ValidarDatos() {
 
 function HabilitarBoton(flag)
 {
+    
     $("#btnIngresar").prop("disabled", flag);
 }
 

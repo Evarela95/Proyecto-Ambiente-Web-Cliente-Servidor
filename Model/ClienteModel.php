@@ -166,4 +166,15 @@ function ReducirCantidadModel($id_usuario, $id_producto, $cantidad)
     CloseDB($enlace);
 }
 
+
+
+function eliminarUser($Id)
+{
+    $enlace = OpenDB();
+    $procedimiento = "call EliminarUsuario($Id);";
+
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
 ?>
