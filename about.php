@@ -29,7 +29,6 @@ include_once __dir__ . '\generales.php';
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="image_2"><img src="images/img-2.png"></div>
                 </div>
                 <div class="col-md-6">
                     <h1 class="about_text">JustGame</h1>
@@ -37,11 +36,7 @@ include_once __dir__ . '\generales.php';
                         comercialización de tecnología gamer. A su vez, importa y distribuye equipo cómputo gamer y
                         componentes informáticos.
                         Somo proveedores e integradores de soluciones con alta tecnología en hardware y software
-                        respaldados por las diferentes marcas fabricantes.</p>
-                        <p1 class="lorem_text">NUESTRAS TIENDAS</p1> 
-                        <div class="col-md-6">
-                            <div class=""><img src="images/fototienda2.jpg"></div>
-                          </div>
+                        respaldados por las diferentes marcas fabricantes.</p>                   
                 </div>
             </div>
         </div>
@@ -56,4 +51,4 @@ include_once __dir__ . '\generales.php';
     <!-- Javascript files-->
     <?php jsSection() ?>
 </body>
-</php>
+                </html>

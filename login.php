@@ -53,10 +53,7 @@ include_once __DIR__ . '/Controller/ClientesController.php';
     <?php copyRightSection() ?>
     <!-- copyright section end -->
     <!-- Javascript files-->
-    <?php jsSection() ?>
-
-
     <script src="../Proyecto-Ambiente-Web-Cliente-Servidor/js/login.js"></script>
 </body>
 
-</php>
+</html>

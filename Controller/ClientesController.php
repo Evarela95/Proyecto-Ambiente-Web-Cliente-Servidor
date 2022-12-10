@@ -49,7 +49,7 @@ function CargarProductos($q)
            
             if(isset($_SESSION["sesionId"]))
             {
-                echo '<td width=20%> <input type="button" onclick="addProduct('.  $resultado["id_producto"].', )" class="btn btn-primary" value="Agregar"> </td>';       
+                echo '<td width=20%> <input type="button" style="margin: 0 auto;"onclick="addProduct('.  $resultado["id_producto"].', )" class="btn btn-primary" value="Agregar"> </td>';       
             }
             echo "</tr>";
         }
@@ -74,14 +74,14 @@ function CargarUsuarios()
             echo '<td>' . $resultado["contrasena"] . '</td>';
             
             if($_SESSION["sesionId"] != $resultado["id_usuario"])
-            echo '<td><a class="btn" href="EditarPerfil.php?q=' . $resultado["id_usuario"] . '">Actualizar<a/>';
+            echo '<td><a class="btn btn-primary" href="EditarPerfil.php?q=' . $resultado["id_usuario"] . '">Actualizar<a/>    ';
         else
-            echo '<td><a class="btn" style="cursor: not-allowed">Actualizar<a/>';
+            echo '<td><a class="btn btn-primary" style="cursor: not-allowed">Actualizar<a/>    ';
 
         if($_SESSION["sesionId"] != $resultado["id_usuario"])
-            echo '<a class="btn open-UserDialog" data-toggle="modal" data-target="#DeleteUserModal" data-id=' . $resultado["id_usuario"] . '>Eliminar</a></td>';
+            echo '<a class="btn btn-danger open-UserDialog" data-toggle="modal" style=" color: white" data-target="#DeleteUserModal" data-id=' . $resultado["id_usuario"] . '>Eliminar</a></td>';
         else
-            echo '<a class="btn" style="cursor: not-allowed">Eliminar</a></td>';
+            echo '<a class="btn btn-danger" style="cursor: not-allowed color: white">Eliminar</a></td>';
 
         echo "</tr>";
             
@@ -108,6 +108,8 @@ if(isset($_POST["btnRegistrarse"]))
     $Username = $_POST["NombreUsuario"];
     $Contrasena = $_POST["Contrasena"];
      RegistrarUsuario($Nombre, $PrimApellido, $SegApellido, $Correo, $Username, $Contrasena);
+     header("Location: login.php"); 
+    
 }
 
 if(isset($_POST["InactivarUsuario"]))
@@ -123,10 +125,11 @@ if(isset($_POST["btnActualizar"]))
     $PrimApellido = $_POST["PrimerApellido"];
     $SegApellido = $_POST["SegundoApellido"];
     $Correo = $_POST["Correo"];
+    $tipoUsuario = $_POST["tipoUsuario"];
     $Username = $_POST["NombreUsuario"];
     $Contrasena = $_POST["Contrasena"];
     
-    ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasena); 
+    ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$tipoUsuario, $Username,$Contrasena); 
    
     header("Location: ADMINISTRACION.php");  
 }
@@ -210,14 +213,17 @@ function ListarTiposUsuario($tipo)
 
     if($datos -> num_rows > 0)
     {
-        echo '<option selected value=""> Seleccione... </option>';
-
+      
         while($fila = mysqli_fetch_array($datos))
         {
             if($tipo == $fila["tipoUsuario"])
-                echo '<option selected value="' . $fila["tipoUsuario"] . '">' . $fila["descripcion"] . '</option>';
-            else
-                echo '<option value="' . $fila["tipoUsuario"] . '">' . $fila["descripcion"] . '</option>';
+            echo '<div class="form-check">';
+
+            echo '<input class="form-check-input" type="radio" name="tipoUsuario" id="tipoUsuario" checked>';
+
+            echo '<label class="form-check-label" id="tipoUsuario" name="tipoUsuario" for="tipoUsuario"' . $fila["tipoUsuario"] . '"><h3>' . $fila["descripcion"] . '</h3></label>';
+            echo '</div>';
+          
         }
     }
 }

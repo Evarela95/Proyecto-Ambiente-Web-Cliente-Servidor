@@ -84,7 +84,7 @@ include_once __dir__ . '\generales.php';
     <?php jsSection() ?>
                 </form>
 </body>
-
+</html>
 <script>
 
 function JSSUMAR(id)

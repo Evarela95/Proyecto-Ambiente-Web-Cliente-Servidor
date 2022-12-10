@@ -51,7 +51,7 @@ include_once __DIR__ . '\Controller\ClientesController.php';
             echo "<h1>Juegos PC</h1>";
         ?>
 
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover " style="text-align:center">
                 <thead>
                     <tr>
 
@@ -76,7 +76,7 @@ include_once __DIR__ . '\Controller\ClientesController.php';
     <?php jsSection() ?>
 </body>
 
-</php>
+            </html>
 
 <script>
 

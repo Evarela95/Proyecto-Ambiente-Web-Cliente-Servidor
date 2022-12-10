@@ -57,11 +57,11 @@ function RegistrarUsuario($Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$
     CloseDB($enlace);
 }
 
-function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasena)
+function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$tipoUsuario,$Username,$Contrasena)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "CALL ActualizarUser($Id,'$Nombre','$PrimApellido','$SegApellido','$Correo','$Username','$Contrasena');";
+    $procedimiento = "CALL ActualizarUser($Id,'$Nombre','$PrimApellido','$SegApellido','$Correo',$tipoUsuario,'$Username','$Contrasena');";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);

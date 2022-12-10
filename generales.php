@@ -174,23 +174,12 @@ function footerSection(){
               </div> 
               <div class="col-sm-6 col-md-6 col-lg-3">
               <h2 class="account_text">Mas informacion</h2>
-              <p class="ipsum_text_2" >Sobre nosotros</p>
-              <p class="ipsum_text_2" >Metodos de Pago</p>
-              <p class="ipsum_text_2" >Tiendas</p>
-              <p class="ipsum_text_2" >Términos & Condiciones</p>
-              <p class="ipsum_text_2" >Cuenta</p>
-              <p class="ipsum_text_2" >Contacto</p>
+              <a class="ipsum_text_2" href="about.php">Sobre nosotros</a>
+              <a class="ipsum_text_2" href="login.php">Cuenta</a>
+              <a class="ipsum_text_2" href="about.php".php">Contacto</a>
               </div>
           </div>           
           </div>
-      </div>
-      <div class="social_icon">
-          <ul>
-              <li><a href="#"><img src="images/fb-icon.png"></a></li>
-              <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-              <li><a href="#"><img src="images/linkdin-icon.png"></a></li>
-              <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-          </ul>
       </div>
   </div>
 </div>';
@@ -243,17 +232,6 @@ function modal()
         </div>';
 
   }
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>

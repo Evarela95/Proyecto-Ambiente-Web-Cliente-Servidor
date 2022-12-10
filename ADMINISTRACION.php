@@ -33,7 +33,7 @@ include_once __DIR__ . '\Controller\ClientesController.php';
         </li>
     </ol>
     <div class="row">
-        <div class="col-md-12 margin-bottom-15">
+        <div class="col-md-12 margin-bottom-15" style="text-align:center">
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -96,4 +96,4 @@ include_once __DIR__ . '\Controller\ClientesController.php';
     <script src="js/usuarios.js"></script>';
 
 </body>
-</php>
+                </html>

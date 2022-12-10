@@ -24,7 +24,7 @@ include_once __DIR__ . '\Controller\ClientesController.php';?>
                                         <input type="text" class="email-bt" placeholder="Nombre" name="Nombre" id="Nombre" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Primero apellido"
+                                        <input type="text" class="email-bt" placeholder="Primer apellido"
                                             name="PrimerApellido" id="PrimerApellido" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">

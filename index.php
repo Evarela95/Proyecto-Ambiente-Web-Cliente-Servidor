@@ -66,7 +66,6 @@ include_once __DIR__ . '\Controller\ClientesController.php';
                 </div>
             </div>
         </div>
-        <!-- about section end -->
         <!-- product section start -->
         <div class="product_section layout_padding">
             <div class="container">
@@ -104,23 +103,23 @@ include_once __DIR__ . '\Controller\ClientesController.php';
                         
                     </div>
                     <div class="col-md-6">
-                        <div class="image_4"><img src="images/juegos.png" style="padding-bottom:80px"></div>
+                        <div class=""><img src="images/juegos.png" style="padding-bottom:80px"></div>
                     </div>
                 </div>
 
             </div>
         </div>
-        <!-- video section end -->
 
-        <!-- footer section start -->
-        <?php footerSection(); ?>
-        <!-- footer section end -->
-
-        <!-- copyright section start -->
-        <?php copyRightSection() ?>
-        <!-- copyright section end -->
-        <!-- Javascript files-->
-        <?php jsSection() ?>
+        </div>
+        </div>
+            <!-- about section end -->
+    <!-- footer section start -->
+    <?php footerSection(); ?>
+    <!-- footer section end -->
+    <!-- copyright section start -->
+    <?php copyRightSection() ?>
+    <!-- copyright section end -->
+    <!-- Javascript files-->
+    <?php jsSection() ?>
 </body>
-
-</php>
+</html>
