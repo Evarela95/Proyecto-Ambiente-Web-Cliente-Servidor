@@ -43,18 +43,14 @@ function CargarProductos($q)
         {
             
             echo '<tr>';
-            echo '<td width=20%>' . $resultado["descripcion"] . '</td>';
-            echo '<td width=20%> ₡ ' . number_format($resultado ["precio"]) . '</td>';
+            echo '<td width=20%><h2>' . $resultado["descripcion"] . '</h2></td>';
+            echo '<td width=20%><h2> ₡ ' . number_format($resultado ["precio"]) . '</h2></td>';
             echo '<td width=20% style="text-align:center"><img src="images/' . $resultado["imagen"] . '" width="200" height="150"></td>';       
            
             if(isset($_SESSION["sesionId"]))
             {
                 echo '<td width=20%> <input type="button" onclick="addProduct('.  $resultado["id_producto"].', )" class="btn btn-primary" value="Agregar"> </td>';       
-           
             }
-           
-           
-           
             echo "</tr>";
         }
     }
@@ -160,9 +156,6 @@ function CargarCarrito()
 }
 
 
-
-
-
 function CargarTotal()
 {
     $datosCarritoTotal = ConsultarTotalModel($_SESSION["sesionId"]);
@@ -191,6 +184,7 @@ if(isset($_POST["btnEliminar"]))
     EliminarCarritoModel($IdUsuario);  
 }
 
+
 if(isset($_POST["btnPagar"]))
 {
     $IdUsuario = $_SESSION["sesionId"];
@@ -210,10 +204,6 @@ if(isset($_POST["sumar"]))
     //ReducirCantidadModel($_SESSION["sesionId"], $id_producto, 1); 
 }
 
-
-
-
-
 function ListarTiposUsuario($tipo)
 {
     $datos = ListarTiposUsuarioModel();   
@@ -231,11 +221,5 @@ function ListarTiposUsuario($tipo)
         }
     }
 }
-
-
-
-
-
-
 
 ?>
