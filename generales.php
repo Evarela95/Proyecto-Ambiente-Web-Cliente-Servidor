@@ -91,7 +91,7 @@ function headerSection()
               </li>';
                     }
 
-                    if(isset($_SESSION["sesionId"]))
+                    if(isset($_SESSION["sesionId"]) && isset($_SESSION["sesionTipoUsuario"]) && $_SESSION["sesionTipoUsuario"] == "1" )
                     {
                       echo '<li class="nav-item">
                       <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACION</a>
@@ -112,6 +112,18 @@ function headerSection()
                     echo '<li class="nav-item">
                         <a class="nav-link" href="Cart.php">CARRITO</a>
                         </li>';}
+
+
+
+
+                    /*if(isset($_SESSION["sesionId"]))
+                    {
+                    echo '<li class="nav-item">
+                        <a class="nav-link">- 17</a>
+                        </li>';}*/
+
+
+
                      
                      
                     
@@ -132,6 +144,7 @@ function headerSection()
                 echo'
          </div>
             
+
          
 
           </nav>

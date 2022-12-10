@@ -146,21 +146,12 @@ function ListarTiposUsuarioModel()
     return $datos;
 }
 
-function pConsultarMenu($tipoUsuario)
-{
-    $enlace = OpenDB();
-    $procedimiento = "CALL pConsultarMenu($tipoUsuario);";
-    $datosMenu = $enlace -> query($procedimiento);
 
-    CloseDB($enlace);
-    return $datosMenu;
-}
-
-function ReducirCantidadModel($id_usuario, $id_producto, $cantidad)
+function ReducirCantidadModel($id_usuario, $id_producto)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "CALL ReducirCantidad($id_usuario,$id_producto,$cantidad);";
+    $procedimiento = "CALL ReducirCantidad($id_usuario,$id_producto);";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);
@@ -171,7 +162,7 @@ function ReducirCantidadModel($id_usuario, $id_producto, $cantidad)
 function eliminarUser($Id)
 {
     $enlace = OpenDB();
-    $procedimiento = "call EliminarUsuario($Id);";
+    $procedimiento = "call InactivarUsuario($Id);";
 
     $enlace -> query($procedimiento);
 

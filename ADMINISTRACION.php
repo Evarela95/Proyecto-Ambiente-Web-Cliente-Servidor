@@ -69,6 +69,9 @@ include_once __DIR__ . '\Controller\ClientesController.php';
     <!-- Javascript files-->
     <?php jsSection() ?>
 
+
+
+
   
        <!-- Modal -->
     <div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -80,7 +83,7 @@ include_once __DIR__ . '\Controller\ClientesController.php';
                 </div>
                 <div class="modal-footer">
 
-                <input type="" id="userId" name="userId" value=""/>
+                <input type="hidden" id="userId" name="userId" value=""/>
                     
                     <input type="button" class="btn btn-primary" value="Continuar" id="btnCambiarEstado" name="btnCambiarEstado"
                     onclick="eliminarUser()">

@@ -84,4 +84,37 @@ include_once __dir__ . '\generales.php';
     <?php jsSection() ?>
                 </form>
 </body>
-</php>
+
+<script>
+
+function JSSUMAR(id)
+{
+    $.ajax({
+        url:"Controller/ClientesController.php",
+        type:"POST",
+        data: { 
+                "sumar" : "sumar", 
+                "id" : id
+              },
+        success:function(data){
+            window.location.href = "Cart.php";
+        }
+    });
+}
+
+function JSRESTAR(id)
+{
+    $.ajax({
+        url:"Controller/ClientesController.php",
+        type:"POST",
+        data: { 
+                "restar" : "restar", 
+                "id" : id
+              },
+        success:function(data){
+            window.location.href = "Cart.php";
+        }
+    });
+}
+
+</script>

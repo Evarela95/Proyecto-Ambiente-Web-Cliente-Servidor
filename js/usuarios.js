@@ -1,22 +1,16 @@
 //Funciones de ADMINISTRACIÓN
 $(document).on("click", ".open-UserDialog", function () {
-    var myUserId = $(this).data('id_usuario');
-    $("#userId").val(myUserId);
-});
 
-
-
-
-$(document).on("click", ".open-UserDialog", function () {
-    var myUserId = $(this).data('id_usuario');
+    var myUserId = $(this).data('id');
     $("#userId").val(myUserId);
 });
 
 
 function eliminarUser()
 {
+
     $.ajax({
-        url:"../Controller/ClientesController.php",
+        url:"Controller/ClientesController.php",
         type:"POST",
         data: { 
                 "eliminarUser" : "eliminarUser", 

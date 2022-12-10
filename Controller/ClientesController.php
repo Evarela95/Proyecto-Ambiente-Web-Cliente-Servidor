@@ -24,7 +24,7 @@ if(isset($_POST["btnIngresar"]))
         $resultado = mysqli_fetch_array($datosUsuario);
         $_SESSION["sesionId"] = $resultado["id_usuario"];
         $_SESSION["sesionNombre"] = $resultado["nombre"];
-        $_SESSION["sesionTipoUsuario"] = $resultado["tipoUsuario"];
+        $_SESSION["sesionTipoUsuario"] = $resultado["tipousuario_tipousuario"];
         header("Location: index.php");
         
     }else{
@@ -152,9 +152,9 @@ function CargarCarrito()
             echo '<tr>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
             echo '<td> ₡ ' . number_format($resultado["precio"]) . '</td>';
-            echo '<td> <button class="btn btn-danger btn-sm" id="btnReducir" name="btnReducir"> - </button></td>';
+            echo '<td> <button class="btn btn-danger btn-sm" id="btnReducir" name="btnReducir" onclick="JSRESTAR('. $resultado["id_producto"] .')"> - </button></td>';
             echo '<td id="btnReducir" name="btnReducir">' . number_format($resultado["cantidad"]) . '</td>';
-            echo '<td> <button class="btn btn-info btn-sm" id="btnSumar" name="btnSumar"> + </button></td>'; 
+            echo '<td> <button class="btn btn-info btn-sm" id="btnSumar" name="btnSumar" onclick="JSSUMAR('. $resultado["id_producto"] .')"> + </button></td>'; 
         }
     }
 }
@@ -198,35 +198,19 @@ if(isset($_POST["btnPagar"]))
     PagarCarritoModel($IdUsuario, $Total);  
 }
 
-if(isset($_POST["btnReducir"]))
+if(isset($_POST["restar"]))
 {
-    $id_producto = $_POST["id_producto"];
-    ReducirCantidadModel($_SESSION["sesionId"], $id_producto, 1); 
+    $id_producto = $_POST["id"];
+    ReducirCantidadModel($_SESSION["sesionId"], $id_producto); 
 }
 
-function CargarMenu()
+if(isset($_POST["sumar"]))
 {
-    if($_SESSION["sesionTipoUsuario"] == null)
-        header("Location: index.php");
-
-    $datosMenu = pConsultarMenu($_SESSION["sesionTipoUsuario"]);
-
-    if($datosMenu -> num_rows > 0)
-    {
-        echo '<div class="template-page-wrapper">
-              <div class="navbar-collapse collapse templatemo-sidebar">
-              <ul class="templatemo-sidebar-menu">';
-
-        while($resultado = mysqli_fetch_array($datosMenu))
-        {
-            echo '<li><a href="' . $resultado["redireccion"] .  $resultado["texto"] . '</a></li>';
-        }
-
-       // echo '<li><a href="" data-toggle="modal" data-target="#confirmModal" data-backdrop="static" data-keyboard="false"><i class="fa fa-sign-out"></i>Cerrar Sesión</a></li>
-         //     </ul>
-           //   </div>';
-    }
+    $id_producto = $_POST["id"];
+    //ReducirCantidadModel($_SESSION["sesionId"], $id_producto, 1); 
 }
+
+
 
 
 
