@@ -107,6 +107,16 @@ function ConsultarTotalModel($IdUsuario)
     return $datosCarritoTotal;
 }
 
+function ConsultarImpuestoModel($IdUsuario)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL ConsultarImpuesto($IdUsuario);";
+    $datosCarritoImp = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosCarritoImp;
+}
+
 function EliminarCarritoModel($IdUsuario)
 {
     $enlace = OpenDB();
@@ -144,6 +154,16 @@ function pConsultarMenu($tipoUsuario)
 
     CloseDB($enlace);
     return $datosMenu;
+}
+
+function ReducirCantidadModel($id_usuario, $id_producto, $cantidad)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "CALL ReducirCantidad($id_usuario,$id_producto,$cantidad);";
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
 }
 
 ?>

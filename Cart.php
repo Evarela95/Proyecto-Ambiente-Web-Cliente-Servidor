@@ -50,7 +50,7 @@ include_once __dir__ . '\generales.php';
             </table>
             <div class="float-right text-right">
 
-                Impuestos: ₡ <?php echo number_format(CargarImpuesto());?><br/>
+                Subtotal: ₡ <?php echo number_format(CargarImpuesto());?><br/>
                 Total: ₡ <?php echo number_format(CargarTotal());?>
                 
                 <input type="hidden" name="txtTotal" value="<?php echo CargarTotal();?> ">

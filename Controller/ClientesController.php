@@ -135,12 +135,9 @@ function CargarCarrito()
             echo '<tr>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
             echo '<td> ₡ ' . number_format($resultado["precio"]) . '</td>';
-            echo '<td> <button class="btn btn-danger btn-sm"> - </button> </td>';
-            echo '<td>' . number_format($resultado["cantidad"]) . '</td>';
-            echo '<td> <button class="btn btn-info btn-sm"> + </button></td>';
-
-            
-           
+            echo '<td> <button class="btn btn-danger btn-sm" id="btnReducir" name="btnReducir"> - </button></td>';
+            echo '<td id="btnReducir" name="btnReducir">' . number_format($resultado["cantidad"]) . '</td>';
+            echo '<td> <button class="btn btn-info btn-sm" id="btnSumar" name="btnSumar"> + </button></td>'; 
         }
     }
 }
@@ -173,7 +170,6 @@ if(isset($_POST["btnEliminar"]))
     EliminarCarritoModel($IdUsuario);  
 }
 
-
 if(isset($_POST["btnPagar"]))
 {
     $IdUsuario = $_SESSION["sesionId"];
@@ -181,7 +177,11 @@ if(isset($_POST["btnPagar"]))
     PagarCarritoModel($IdUsuario, $Total);  
 }
 
-
+if(isset($_POST["btnReducir"]))
+{
+    $id_producto = $_POST["id_producto"];
+    ReducirCantidadModel($_SESSION["sesionId"], $id_producto, 1); 
+}
 
 function CargarMenu()
 {
