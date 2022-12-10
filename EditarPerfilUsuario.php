@@ -34,43 +34,44 @@ if (session_status() == PHP_SESSION_NONE)
                     <div class="email_box">
                         <div class="input_main">
                             <div class="container">
-                            <div class="form-group">
-                                        <input type="text" class="email-bt" id="txtId" 
-                                        name="txtId" readonly value=<?php echo $datos["id_usuario"] ?> >
-                                    </div>        
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt"  placeholder="Nombre" id="Nombre" 
-                                        name="Nombre" value=<?php echo $datos["nombre"] ?>>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Primero apellido"
+                                        <div class="form-group">
+                                           <input type="text" class="email-bt" id="txtId" 
+                                             name="txtId" readonly value=<?php echo $datos["id_usuario"] ?> >
+                                        </div>        
+                                         <div class="form-group">
+                                           <input type="text" class="email-bt"  placeholder="Nombre" id="Nombre" 
+                                            name="Nombre" value=<?php echo $datos["nombre"] ?>>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="email-bt" placeholder="Primero apellido"
                                             name="PrimerApellido" id="PrimerApellido"  value=<?php echo $datos["primApellido"] ?>>                                      
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Segundo apellido"
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="email-bt" placeholder="Segundo apellido"
                                             name="SegundoApellido" id="SegundoApellido"  value=<?php echo $datos["segApellido"] ?>>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Correo" name="Correo" id="Correo" value=<?php echo $datos["correo"] ?>>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Nombre de usuario"
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="email-bt" placeholder="Correo" name="Correo" id="Correo" value=<?php echo $datos["correo"] ?>>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="email-bt" placeholder="Nombre de usuario"
                                             name="NombreUsuario" id="NombreUsuario"  value=<?php echo $datos["username"] ?>>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="email-bt" placeholder="Contraseña"
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="email-bt" placeholder="Contraseña"
                                             name="Contrasena" id="Contrasena" value=<?php echo $datos["contrasena"] ?>>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="submit" value="Actualizar" name="btnActualizar" id="btnActualizar"
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" value="Actualizar" name="btnActualizar" id="btnActualizar"
                                             class="btn btn-danger">
                                             <a href="MantUsuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
-                                    </div>
-                            </div>
-
+                                         </div>
                         </div>
+
                     </div>
                 </div>
+            </div>
+            
                 <div class="col-md-6">
                     <div class="image_6"><img src="images/img-6.png"></div>
                 </div>

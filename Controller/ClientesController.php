@@ -43,18 +43,14 @@ function CargarProductos($q)
         {
             
             echo '<tr>';
-            echo '<td width=20%>' . $resultado["descripcion"] . '</td>';
-            echo '<td width=20%> ₡ ' . number_format($resultado ["precio"]) . '</td>';
+            echo '<td width=20%><h2>' . $resultado["descripcion"] . '</h2></td>';
+            echo '<td width=20%><h2> ₡ ' . number_format($resultado ["precio"]) . '</h2></td>';
             echo '<td width=20% style="text-align:center"><img src="images/' . $resultado["imagen"] . '" width="200" height="150"></td>';       
            
             if(isset($_SESSION["sesionId"]))
             {
                 echo '<td width=20%> <input type="button" onclick="addProduct('.  $resultado["id_producto"].', )" class="btn btn-primary" value="Agregar"> </td>';       
-           
             }
-           
-           
-           
             echo "</tr>";
         }
     }
@@ -152,15 +148,18 @@ function CargarCarrito()
             echo '<tr>';
             echo '<td>' . $resultado["descripcion"] . '</td>';
             echo '<td> ₡ ' . number_format($resultado["precio"]) . '</td>';
-            echo '<td> <button class="btn btn-danger btn-sm" id="btnReducir" name="btnReducir"> - </button></td>';
-            echo '<td id="btnReducir" name="btnReducir">' . number_format($resultado["cantidad"]) . '</td>';
-            echo '<td> <button class="btn btn-info btn-sm" id="btnSumar" name="btnSumar"> + </button></td>'; 
+            echo '<td> <button class="btn btn-danger btn-sm" id = "resta" name ="resta"> - </button> </td>';
+            echo '<td <button id="cantidad" name="cantidad">' . number_format($resultado["cantidad"]) . '</button></td>';
+            echo '<td> <button class="btn btn-info btn-sm" id = "suma" name ="suma"> + </button></td>';
+
+            if(isset($_POST["resta"]))
+{   $Cantidad = number_format($resultado["cantidad"]);
+     RegistrarUsuario($_SESSION["sesionId"],$Cantidad);
+}
+           
         }
     }
 }
-
-
-
 
 
 function CargarTotal()
@@ -191,6 +190,7 @@ if(isset($_POST["btnEliminar"]))
     EliminarCarritoModel($IdUsuario);  
 }
 
+
 if(isset($_POST["btnPagar"]))
 {
     $IdUsuario = $_SESSION["sesionId"];
@@ -198,11 +198,7 @@ if(isset($_POST["btnPagar"]))
     PagarCarritoModel($IdUsuario, $Total);  
 }
 
-if(isset($_POST["btnReducir"]))
-{
-    $id_producto = $_POST["id_producto"];
-    ReducirCantidadModel($_SESSION["sesionId"], $id_producto, 1); 
-}
+
 
 function CargarMenu()
 {
@@ -221,10 +217,6 @@ function CargarMenu()
         {
             echo '<li><a href="' . $resultado["redireccion"] .  $resultado["texto"] . '</a></li>';
         }
-
-       // echo '<li><a href="" data-toggle="modal" data-target="#confirmModal" data-backdrop="static" data-keyboard="false"><i class="fa fa-sign-out"></i>Cerrar Sesión</a></li>
-         //     </ul>
-           //   </div>';
     }
 }
 
@@ -247,11 +239,5 @@ function ListarTiposUsuario($tipo)
         }
     }
 }
-
-
-
-
-
-
 
 ?>
