@@ -35,36 +35,36 @@ if (session_status() == PHP_SESSION_NONE)
                         <div class="input_main">
                             <div class="container">
                                         <div class="form-group">
-                                           <input type="text" class="email-bt" id="txtId" 
+                                           <input class="form-control" type="text" id="txtId" 
                                              name="txtId" readonly value=<?php echo $datos["id_usuario"] ?> >
                                         </div>        
                                          <div class="form-group">
-                                           <input type="text" class="email-bt"  placeholder="Nombre" id="Nombre" 
+                                           <input class="form-control" type="text" placeholder="Nombre" id="Nombre" 
                                             name="Nombre" value=<?php echo $datos["nombre"] ?>>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="email-bt" placeholder="Primero apellido"
+                                            <input class="form-control" type="text" placeholder="Primero apellido"
                                             name="PrimerApellido" id="PrimerApellido"  value=<?php echo $datos["primApellido"] ?>>                                      
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="email-bt" placeholder="Segundo apellido"
+                                            <input class="form-control" type="text" placeholder="Segundo apellido"
                                             name="SegundoApellido" id="SegundoApellido"  value=<?php echo $datos["segApellido"] ?>>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="email-bt" placeholder="Correo" name="Correo" id="Correo" value=<?php echo $datos["correo"] ?>>
+                                            <input class="form-control" type="text" placeholder="Correo" name="Correo" id="Correo" value=<?php echo $datos["correo"] ?>>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="email-bt" placeholder="Nombre de usuario"
+                                            <input class="form-control" type="text" placeholder="Nombre de usuario"
                                             name="NombreUsuario" id="NombreUsuario"  value=<?php echo $datos["username"] ?>>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="email-bt" placeholder="Contraseña"
+                                            <input type="password" class="form-control" placeholder="Contraseña"
                                             name="Contrasena" id="Contrasena" value=<?php echo $datos["contrasena"] ?>>
                                         </div>
                                         <div class="form-group">
                                             <input type="submit" value="Actualizar" name="btnActualizar" id="btnActualizar"
                                             class="btn btn-danger">
-                                            <a href="MantUsuarios.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                                            <a href="index.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                                          </div>
                         </div>
 

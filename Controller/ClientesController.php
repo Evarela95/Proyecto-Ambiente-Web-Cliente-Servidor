@@ -125,13 +125,25 @@ if(isset($_POST["btnActualizar"]))
     $PrimApellido = $_POST["PrimerApellido"];
     $SegApellido = $_POST["SegundoApellido"];
     $Correo = $_POST["Correo"];
-    $tipoUsuario = $_POST["tipoUsuario"];
     $Username = $_POST["NombreUsuario"];
     $Contrasena = $_POST["Contrasena"];
     
-    ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$tipoUsuario, $Username,$Contrasena); 
+    ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo, $Username,$Contrasena); 
    
     header("Location: ADMINISTRACION.php");  
+}
+
+
+if(isset($_POST["btnPromover"]))
+{
+    $Id = $_POST["txtId"];
+    PromoverUserModel($Id); 
+}
+
+if(isset($_POST["btnDegradar"]))
+{
+    $Id = $_POST["txtId"];
+    DegragarUserModel($Id); 
 }
 
 
@@ -204,28 +216,9 @@ if(isset($_POST["restar"]))
 if(isset($_POST["sumar"]))
 {
     $id_producto = $_POST["id"];
-    //ReducirCantidadModel($_SESSION["sesionId"], $id_producto, 1); 
+    AumentarCantidadModel($_SESSION["sesionId"], $id_producto, 1); 
 }
 
-function ListarTiposUsuario($tipo)
-{
-    $datos = ListarTiposUsuarioModel();   
 
-    if($datos -> num_rows > 0)
-    {
-      
-        while($fila = mysqli_fetch_array($datos))
-        {
-            if($tipo == $fila["tipoUsuario"])
-            echo '<div class="form-check">';
-
-            echo '<input class="form-check-input" type="radio" name="tipoUsuario" id="tipoUsuario" checked>';
-
-            echo '<label class="form-check-label" id="tipoUsuario" name="tipoUsuario" for="tipoUsuario"' . $fila["tipoUsuario"] . '"><h3>' . $fila["descripcion"] . '</h3></label>';
-            echo '</div>';
-          
-        }
-    }
-}
 
 ?>

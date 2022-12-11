@@ -24,6 +24,7 @@ include_once __dir__ . '\generales.php';
                     }
                     ?> 
                 </li>
+                
             </ol>
     <!-- about section start -->
     <section class="pt-5 pb-5">

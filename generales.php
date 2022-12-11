@@ -35,6 +35,7 @@ function headerSite()
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">';
       
+      
 }
 
 function headerSection() 
@@ -94,7 +95,7 @@ function headerSection()
                     if(isset($_SESSION["sesionId"]) && isset($_SESSION["sesionTipoUsuario"]) && $_SESSION["sesionTipoUsuario"] == "1" )
                     {
                       echo '<li class="nav-item">
-                      <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACION</a>
+                      <a class="nav-link" href="ADMINISTRACION.php">ADMINISTRACIóN</a>
                   </li>';
                     }
                     
@@ -131,7 +132,7 @@ function headerSection()
                       {
                        
                     echo ' <li class="nav-item">
-                     <a class="btn btn-danger"<i class="fa fa-sign-out" href="cerrarsesion.php">Cerrar Sesion</a></i>
+                     <a class="btn btn-danger"<i class="fa fa-sign-out" href="cerrarsesion.php">CERRAR SESIÓN</a></i>
                      </li>';
                      
                       } echo'
@@ -173,7 +174,7 @@ function footerSection(){
                   <p class="ipsum_text_2">Correo: info@justgame.com</p>
               </div> 
               <div class="col-sm-6 col-md-6 col-lg-3">
-              <h2 class="account_text">Mas informacion</h2>
+              <h2 class="account_text">Más información</h2>
               <a class="ipsum_text_2" href="about.php">Sobre nosotros</a>
               <a class="ipsum_text_2" href="login.php">Cuenta</a>
               <a class="ipsum_text_2" href="about.php".php">Contacto</a>

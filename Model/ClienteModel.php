@@ -57,11 +57,11 @@ function RegistrarUsuario($Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$
     CloseDB($enlace);
 }
 
-function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$tipoUsuario,$Username,$Contrasena)
+function ActualizarUsuarioModel($Id,$Nombre,$PrimApellido,$SegApellido,$Correo,$Username,$Contrasena)
 {
     $enlace = OpenDB();
 
-    $procedimiento = "CALL ActualizarUser($Id,'$Nombre','$PrimApellido','$SegApellido','$Correo',$tipoUsuario,'$Username','$Contrasena');";
+    $procedimiento = "CALL ActualizarUser($Id,'$Nombre','$PrimApellido','$SegApellido','$Correo','$Username','$Contrasena');";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);
@@ -157,6 +157,15 @@ function ReducirCantidadModel($id_usuario, $id_producto)
     CloseDB($enlace);
 }
 
+function AumentarCantidadModel($id_usuario, $id_producto)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "CALL AumentarCantidad($id_usuario,$id_producto);";
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
 
 
 function eliminarUser($Id)
@@ -164,6 +173,28 @@ function eliminarUser($Id)
     $enlace = OpenDB();
     $procedimiento = "call InactivarUsuario($Id);";
 
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
+
+
+function PromoverUserModel($Id)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "CALL PromoverUser($Id);";
+    $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+}
+
+function DegragarUserModel($Id)
+{
+    $enlace = OpenDB();
+
+    $procedimiento = "CALL DegragarUser($Id);";
     $enlace -> query($procedimiento);
 
     CloseDB($enlace);

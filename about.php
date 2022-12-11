@@ -28,7 +28,7 @@ include_once __dir__ . '\generales.php';
     <div class="about_section layout_padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                 </div>
                 <div class="col-md-6">
                     <h1 class="about_text">JustGame</h1>
@@ -37,6 +37,8 @@ include_once __dir__ . '\generales.php';
                         componentes informáticos.
                         Somo proveedores e integradores de soluciones con alta tecnología en hardware y software
                         respaldados por las diferentes marcas fabricantes.</p>                   
+                </div><div class="col-md-6">
+                    <div class="image_6"><img src="images/img-6.png"width="50%"></div>
                 </div>
             </div>
         </div>

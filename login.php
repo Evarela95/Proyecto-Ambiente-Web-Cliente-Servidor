@@ -27,7 +27,7 @@ include_once __DIR__ . '/Controller/ClientesController.php';
                                             id="Usuario" onblur="ValidarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="email-bt" placeholder="Contrasena" id="Contrasena"
+                                        <input type="password" class="email-bt" placeholder="Contraseña" id="Contrasena"
                                             name="Contrasena" onblur="ValidarDatos();">
                                     </div>
                                     <div class="form-group">
