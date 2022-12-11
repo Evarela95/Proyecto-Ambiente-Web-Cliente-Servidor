@@ -30,11 +30,12 @@ if (session_status() == PHP_SESSION_NONE)
             <!-- contact section start -->
     <div class="contact_section layout_padding padding_top_0">
         <div class="container">
-            <div class="row">
+            <div class="row" style="display: flex;  align-items: center; justify-content: center;">
                 <div class="col-md-6">
                     <div class="email_box">
-                        <div class="input_main">
+                        <div class="input_main" >
                             <div class="container" >
+                            <div class="product_text" style="color: #00008B;">ADMINISTRACIóN </div>
                                 <div class="form-group" >
                                 <label class="email" for="txtId">ID</label>
                                         <input class="form-control" type="text" id="txtId" name="txtId" readonly value=<?php echo $datos["id_usuario"] ?> >
@@ -83,11 +84,12 @@ if (session_status() == PHP_SESSION_NONE)
                                         <input type="password" class="form-control"  placeholder="Contraseña"
                                             name="Contrasena" id="Contrasena" value=<?php echo $datos["contrasena"] ?>>
                                 </div>
-                                <div class="row">
+                                <div class="row"style="display: flex;  align-items: center; justify-content: center;">
                     
-                                <div class="form-group">
+                                <div class="form-group" >
                                         <input type="submit" value="Actualizar" name="btnActualizar" id="btnActualizar"
-                                            class="btn btn-danger">
+                                            class="btn btn-primary" onclick="alert('SE ACTUALIZÓ EL USUARIO');">
+                                            
                                             <a href="ADMINISTRACION.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                                             
                                         </div>
@@ -97,9 +99,7 @@ if (session_status() == PHP_SESSION_NONE)
                     </div>
                 </div>
                 
-            </div><div class="col-md-6">
-                    <div class="image_6"><img src="images/img-6.png"></div>
-                </div>
+            </div>
         </div>
     </div>
     <br>

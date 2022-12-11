@@ -32,13 +32,13 @@ include_once __dir__ . '\generales.php';
                 </div>
                 <div class="col-md-6">
                     <h1 class="about_text">JustGame</h1>
-                    <p class="lorem_text">JustGame desde 2022, es una empresa de Costa Rica, que se enfoca en la
+                    <h2 style="text-align: justify;">JustGame desde 2022, es una empresa de Costa Rica, que se enfoca en la
                         comercialización de tecnología gamer. A su vez, importa y distribuye equipo cómputo gamer y
                         componentes informáticos.
                         Somo proveedores e integradores de soluciones con alta tecnología en hardware y software
-                        respaldados por las diferentes marcas fabricantes.</p>                   
+                        respaldados por las diferentes marcas fabricantes.</h2>                   
                 </div><div class="col-md-6">
-                    <div class="image_6"><img src="images/img-6.png"width="50%"></div>
+                    <div class="image_6"><img src="images/game-logo.jpg"width="200%"></div>
                 </div>
             </div>
         </div>

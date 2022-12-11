@@ -61,9 +61,9 @@ if (session_status() == PHP_SESSION_NONE)
                                             <input type="password" class="form-control" placeholder="Contraseña"
                                             name="Contrasena" id="Contrasena" value=<?php echo $datos["contrasena"] ?>>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="display: flex;  align-items: center; justify-content: center;">
                                             <input type="submit" value="Actualizar" name="btnActualizar" id="btnActualizar"
-                                            class="btn btn-danger">
+                                            class="btn btn-primary"    >
                                             <a href="index.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
                                          </div>
                         </div>
@@ -73,7 +73,7 @@ if (session_status() == PHP_SESSION_NONE)
             </div>
             
                 <div class="col-md-6">
-                    <div class="image_6"><img src="images/img-6.png"></div>
+                    <div class="image_6"><img src="images/MmQa.gif" width="100%" style="border-radius: 10%; "></div>
                 </div>
             </div>
         </div>

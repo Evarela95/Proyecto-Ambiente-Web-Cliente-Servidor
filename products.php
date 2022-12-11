@@ -36,19 +36,20 @@ include_once __DIR__ . '\Controller\ClientesController.php';
 
         <?php
             if ($_GET["q"] == 1)
-                 echo "<h1>Consolas Play Station</h1>";
+                 echo '<div class="product_text" style="color: #00008B;">Play Station </div>';
             elseif($_GET["q"] == 2)
-                 echo "<h1>Juegos Ps 4</h1>";
+            echo '<div class="product_text" style="color: #00008B;">Juegos PS4 </div>';
             elseif($_GET["q"] == 3)
-                echo "<h1>Juegos Ps 5</h1>";
+            echo '<div class="product_text" style="color: #00008B;">Juegos PS5 </div>';
             elseif($_GET["q"] == 4)
-                echo "<h1>Consolas Xbox</h1>";
+            echo '<div class="product_text" style="color: #006400;"> Consolas Xbox</div>';    
+            
             elseif($_GET["q"] == 5)
-                echo "<h1>Juegos Xbox</h1>";
+            echo '<div class="product_text" style="color: #006400;"> Juegos Xbox</div>';  
             elseif($_GET["q"] == 6)
-                echo "<h1>PC Gamer</h1>";
+            echo '<div class="product_text" style="color: #8B008B;"> PC Gamer</div>'; 
             elseif($_GET["q"] == 7)
-            echo "<h1>Juegos PC</h1>";
+            echo '<div class="product_text" style="color: #8B008B;"> Juegos PC</div>'; 
         ?>
 
             <table class="table table-bordered table-hover " style="text-align:center">

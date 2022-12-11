@@ -21,29 +21,31 @@ include_once __DIR__ . '\Controller\ClientesController.php';?>
                             <div class="container">
                                 <form action="" method="post">
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Nombre" name="Nombre" id="Nombre" onblur="RegistrarDatos();">
+                                    <div class="product_text" style="color: #DC143C;">Registrarse 
+                                        </div>
+                                        <input class="form-control" type="text" placeholder="Nombre" name="Nombre" id="Nombre" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Primer apellido"
+                                        <input class="form-control" type="text" placeholder="Primer apellido"
                                             name="PrimerApellido" id="PrimerApellido" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Segundo apellido"
+                                        <input class="form-control" type="text" placeholder="Segundo apellido"
                                             name="SegundoApellido" id="SegundoApellido" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Correo" name="Correo" id="Correo" onblur="RegistrarDatos();">
+                                        <input class="form-control" type="text" placeholder="Correo" name="Correo" id="Correo" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Nombre de usuario"
+                                        <input class="form-control" type="text" placeholder="Nombre de usuario"
                                             name="NombreUsuario" id="NombreUsuario" onblur="RegistrarDatos();">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="email-bt" placeholder="Contraseña"
+                                        <input type="password" class="form-control" placeholder="Contraseña"
                                             name="Contrasena" id="Contrasena" onblur="RegistrarDatos();">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="submit" value="Registrarse" name="btnRegistrarse" id="btnRegistrarse"
+                                    <div class="form-group" style="display: flex;  align-items: center; justify-content: center;">
+                                        <input type="submit" value="Registrarse" name="btnRegistrarse" id="btnRegistrarse" 
                                             class="btn btn-danger">
                                     </div>
                                 </form>
@@ -53,7 +55,7 @@ include_once __DIR__ . '\Controller\ClientesController.php';?>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="image_6"><img src="images/img-6.png"></div>
+                    <div class="image_6"><img src="images/barra-de-progreso.gif"></div>
                 </div>
             </div>
         </div>
