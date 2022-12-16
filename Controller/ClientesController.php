@@ -79,9 +79,9 @@ function CargarUsuarios()
             echo '<td><a class="btn btn-primary" style="cursor: not-allowed">Actualizar<a/>    ';
 
         if($_SESSION["sesionId"] != $resultado["id_usuario"])
-            echo '<a class="btn btn-danger open-UserDialog" data-toggle="modal" style=" color: white" data-target="#DeleteUserModal" data-id=' . $resultado["id_usuario"] . '>Eliminar</a></td>';
+            echo '<a class="btn btn-danger open-UserDialog" data-toggle="modal" style=" color: white" data-target="#DeleteUserModal" data-id=' . $resultado["id_usuario"] . '>Inactivar</a></td>';
         else
-            echo '<a class="btn btn-danger" style="cursor: not-allowed color: white">Eliminar</a></td>';
+            echo '<a class="btn btn-danger" style="cursor: not-allowed color: white">Inactivar</a></td>';
 
         echo "</tr>";
             
