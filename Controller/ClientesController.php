@@ -151,6 +151,7 @@ if(isset($_POST['btnAddProduct']))
 {
     $id_producto = $_POST["id_producto"];
     AddProductModel($_SESSION["sesionId"], $id_producto, 1);
+    sumCarritoC();
 }
 
 function CargarCarrito()
@@ -220,5 +221,18 @@ if(isset($_POST["sumar"]))
 }
 
 
+function sumCarritoC()
+{
+    $datosCarritoSum = sumCarritoModel($_SESSION["sesionId"]);
+    if($datosCarritoSum -> num_rows > 0)
+    {
+        while($resultado = mysqli_fetch_array($datosCarritoSum))
+        {
+           
+            echo  '<h3>('.$resultado["suma"].')</h3>';
+            
+            }
+    }
+}
 
 ?>

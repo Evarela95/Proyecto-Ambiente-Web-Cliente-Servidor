@@ -1,5 +1,5 @@
 <?php
-
+include_once __DIR__ . '\Controller\ClientesController.php';
  function headerLogin()
  {
    echo '<title>Título</title>
@@ -52,7 +52,7 @@ function headerSection()
                 <span class="navbar-toggler-icon"></span> 
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto" style="">
                    
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -110,29 +110,24 @@ function headerSection()
                     
                     if(isset($_SESSION["sesionId"]))
                     {
-                    echo '<li class="nav-item">
-                        <a class="nav-link" href="Cart.php">CARRITO</a>
-                        </li>';}
+                    echo '<li class="nav-item" >
+                        <a class="nav-link" href="Cart.php" >CARRITO<img src="images/agregar-carrito.png"></a>
+                        </li>' ;
+                        
+                        sumCarritoC();
+
+                        
+                      }
 
 
 
-
-                    /*if(isset($_SESSION["sesionId"]))
-                    {
-                    echo '<li class="nav-item">
-                        <a class="nav-link">- 17</a>
-                        </li>';}*/
-
-
-
-                     
-                     
+                      
                     
                       if(isset($_SESSION["sesionId"]))
                       {
                        
-                    echo ' <li class="nav-item">
-                     <a class="btn btn-danger"<i class="fa fa-sign-out" href="cerrarsesion.php">CERRAR SESIÓN</a></i>
+                    echo ' <li class="nav-item"> 
+                     <a class="btn btn-danger btn-sm" style="margin-left: 150px"<i class="fa fa-sign-out" href="cerrarsesion.php" >CERRAR SESIÓN</a></i>
                      </li>';
                      
                       } echo'

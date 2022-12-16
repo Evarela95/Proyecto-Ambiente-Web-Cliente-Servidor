@@ -47,7 +47,7 @@ include_once __dir__ . '\generales.php';
                     <?php
                     CargarCarrito();
                     ?>
-
+                   
                 </tbody>
             </table>
             <div class="float-right text-right">

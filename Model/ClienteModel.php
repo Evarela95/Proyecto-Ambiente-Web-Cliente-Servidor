@@ -199,4 +199,17 @@ function DegragarUserModel($Id)
 
     CloseDB($enlace);
 }
+
+
+
+
+function sumCarritoModel($IdUsuario)
+{
+    $enlace = OpenDB();
+    $procedimiento = "CALL sumCarrito($IdUsuario);";
+    $datosCarritoSum = $enlace -> query($procedimiento);
+
+    CloseDB($enlace);
+    return $datosCarritoSum;
+}
 ?>
